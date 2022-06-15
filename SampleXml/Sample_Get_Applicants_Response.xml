@@ -1,0 +1,301 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+  <env:Body>
+    <wd:Get_Applicants_Response xmlns:wd="urn:com.workday/bsvc" wd:version="v28.1">
+      <wd:Request_References>
+        <wd:Applicant_Reference>
+          <wd:ID wd:type="WID">888a3141b1b40100d1112e7bc5880000</wd:ID>
+          <wd:ID wd:type="Applicant_ID">A04825</wd:ID>
+        </wd:Applicant_Reference>
+      </wd:Request_References>
+      <wd:Response_Results>
+        <wd:Total_Results>1</wd:Total_Results>
+        <wd:Total_Pages>1</wd:Total_Pages>
+        <wd:Page_Results>1</wd:Page_Results>
+        <wd:Page>1</wd:Page>
+      </wd:Response_Results>
+      <wd:Response_Data>
+        <wd:Applicant>
+          <wd:Applicant_Reference>
+            <wd:ID wd:type="WID">888a3141b1b40100d1112e7bc5880000</wd:ID>
+            <wd:ID wd:type="Applicant_ID">A04825</wd:ID>
+          </wd:Applicant_Reference>
+          <wd:Applicant_Data>
+            <wd:Applicant_ID>A04825</wd:Applicant_ID>
+            <wd:Personal_Data>
+              <wd:Name_Data>
+                <wd:Legal_Name_Data>
+                  <wd:Name_Detail_Data wd:Formatted_Name="Jessa TestCandidate" wd:Reporting_Name="TestCandidate, Jessa">
+                    <wd:Country_Reference>
+                      <wd:ID wd:type="WID">bc33aa3152ec42d4995f4791a106ed09</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-2_Code">US</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-3_Code">USA</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Numeric-3_Code">840</wd:ID>
+                    </wd:Country_Reference>
+                    <wd:First_Name>Jessa</wd:First_Name>
+                    <wd:Last_Name>TestCandidate</wd:Last_Name>
+                  </wd:Name_Detail_Data>
+                </wd:Legal_Name_Data>
+                <wd:Preferred_Name_Data>
+                  <wd:Name_Detail_Data wd:Formatted_Name="Jessa TestCandidate" wd:Reporting_Name="TestCandidate, Jessa">
+                    <wd:Country_Reference>
+                      <wd:ID wd:type="WID">bc33aa3152ec42d4995f4791a106ed09</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-2_Code">US</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-3_Code">USA</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Numeric-3_Code">840</wd:ID>
+                    </wd:Country_Reference>
+                    <wd:First_Name>Jessa</wd:First_Name>
+                    <wd:Last_Name>TestCandidate</wd:Last_Name>
+                  </wd:Name_Detail_Data>
+                </wd:Preferred_Name_Data>
+              </wd:Name_Data>
+              <wd:Birth_Date>2000-08-06-07:00</wd:Birth_Date>
+              <wd:Identification_Data>
+                <wd:National_ID>
+                  <wd:National_ID_Reference>
+                    <wd:ID wd:type="WID">353870ffa88c0100d2afe738be4f0000</wd:ID>
+                  </wd:National_ID_Reference>
+                  <wd:National_ID_Data>
+                    <wd:ID>333333333</wd:ID>
+                    <wd:ID_Type_Reference>
+                      <wd:ID wd:type="WID">93636994cfe84825a1daaa933cbba7e7</wd:ID>
+                      <wd:ID wd:type="National_ID_Type_Code">USA-SSN</wd:ID>
+                    </wd:ID_Type_Reference>
+                    <wd:Country_Reference>
+                      <wd:ID wd:type="WID">bc33aa3152ec42d4995f4791a106ed09</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-2_Code">US</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-3_Code">USA</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Numeric-3_Code">840</wd:ID>
+                    </wd:Country_Reference>
+                  </wd:National_ID_Data>
+                  <wd:National_ID_Shared_Reference>
+                    <wd:ID wd:type="WID">353870ffa88c0100d2afe7d296d80000</wd:ID>
+                    <wd:ID wd:type="National_Identifier_Reference_ID">NATIONAL_IDENTIFIER_REFERENCE-6-2162</wd:ID>
+                  </wd:National_ID_Shared_Reference>
+                </wd:National_ID>
+                <wd:National_ID>
+                  <wd:National_ID_Reference>
+                    <wd:ID wd:type="WID">353870ffa88c0100d396ba30170f0003</wd:ID>
+                  </wd:National_ID_Reference>
+                  <wd:National_ID_Data>
+                    <wd:ID>333333334</wd:ID>
+                    <wd:ID_Type_Reference>
+                      <wd:ID wd:type="WID">93636994cfe84825a1daaa933cbba7e7</wd:ID>
+                      <wd:ID wd:type="National_ID_Type_Code">USA-SSN</wd:ID>
+                    </wd:ID_Type_Reference>
+                    <wd:Country_Reference>
+                      <wd:ID wd:type="WID">bc33aa3152ec42d4995f4791a106ed09</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-2_Code">US</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-3_Code">USA</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Numeric-3_Code">840</wd:ID>
+                    </wd:Country_Reference>
+                  </wd:National_ID_Data>
+                  <wd:National_ID_Shared_Reference>
+                    <wd:ID wd:type="WID">353870ffa88c0100d396ba30170f0004</wd:ID>
+                    <wd:ID wd:type="National_Identifier_Reference_ID">NATIONAL_IDENTIFIER_REFERENCE-6-2163</wd:ID>
+                  </wd:National_ID_Shared_Reference>
+                </wd:National_ID>
+                <wd:National_ID>
+                  <wd:National_ID_Reference>
+                    <wd:ID wd:type="WID">353870ffa88c0100d5ab6a772bcc0000</wd:ID>
+                  </wd:National_ID_Reference>
+                  <wd:National_ID_Data>
+                    <wd:ID>333333334</wd:ID>
+                    <wd:ID_Type_Reference>
+                      <wd:ID wd:type="WID">93636994cfe84825a1daaa933cbba7e7</wd:ID>
+                      <wd:ID wd:type="National_ID_Type_Code">USA-SSN</wd:ID>
+                    </wd:ID_Type_Reference>
+                    <wd:Country_Reference>
+                      <wd:ID wd:type="WID">bc33aa3152ec42d4995f4791a106ed09</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-2_Code">US</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-3_Code">USA</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Numeric-3_Code">840</wd:ID>
+                    </wd:Country_Reference>
+                  </wd:National_ID_Data>
+                  <wd:National_ID_Shared_Reference>
+                    <wd:ID wd:type="WID">353870ffa88c0100d5ab6a772bcc0001</wd:ID>
+                    <wd:ID wd:type="National_Identifier_Reference_ID">NATIONAL_IDENTIFIER_REFERENCE-6-2164</wd:ID>
+                  </wd:National_ID_Shared_Reference>
+                </wd:National_ID>
+                <wd:National_ID>
+                  <wd:National_ID_Reference>
+                    <wd:ID wd:type="WID">353870ffa88c0100d6bd3b30c82d0000</wd:ID>
+                  </wd:National_ID_Reference>
+                  <wd:National_ID_Data>
+                    <wd:ID>333333334</wd:ID>
+                    <wd:ID_Type_Reference>
+                      <wd:ID wd:type="WID">93636994cfe84825a1daaa933cbba7e7</wd:ID>
+                      <wd:ID wd:type="National_ID_Type_Code">USA-SSN</wd:ID>
+                    </wd:ID_Type_Reference>
+                    <wd:Country_Reference>
+                      <wd:ID wd:type="WID">bc33aa3152ec42d4995f4791a106ed09</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-2_Code">US</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-3_Code">USA</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Numeric-3_Code">840</wd:ID>
+                    </wd:Country_Reference>
+                    <wd:Verification_Date>2022-05-23-07:00</wd:Verification_Date>
+                  </wd:National_ID_Data>
+                  <wd:National_ID_Shared_Reference>
+                    <wd:ID wd:type="WID">353870ffa88c0100d6bd3b30c82d0001</wd:ID>
+                    <wd:ID wd:type="National_Identifier_Reference_ID">NATIONAL_IDENTIFIER_REFERENCE-6-2165</wd:ID>
+                  </wd:National_ID_Shared_Reference>
+                </wd:National_ID>
+                <wd:National_ID>
+                  <wd:National_ID_Reference>
+                    <wd:ID wd:type="WID">353870ffa88c0100d72d709f093b0000</wd:ID>
+                  </wd:National_ID_Reference>
+                  <wd:National_ID_Data>
+                    <wd:ID>333333334</wd:ID>
+                    <wd:ID_Type_Reference>
+                      <wd:ID wd:type="WID">93636994cfe84825a1daaa933cbba7e7</wd:ID>
+                      <wd:ID wd:type="National_ID_Type_Code">USA-SSN</wd:ID>
+                    </wd:ID_Type_Reference>
+                    <wd:Country_Reference>
+                      <wd:ID wd:type="WID">bc33aa3152ec42d4995f4791a106ed09</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-2_Code">US</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-3_Code">USA</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Numeric-3_Code">840</wd:ID>
+                    </wd:Country_Reference>
+                    <wd:Verification_Date>2022-05-23-07:00</wd:Verification_Date>
+                    <wd:Verified_By_Reference>
+                      <wd:ID wd:type="WID">2dd1b9fd0cc8100cd169981aa4af0a9f</wd:ID>
+                      <wd:ID wd:type="Employee_ID">21081</wd:ID>
+                    </wd:Verified_By_Reference>
+                  </wd:National_ID_Data>
+                  <wd:National_ID_Shared_Reference>
+                    <wd:ID wd:type="WID">353870ffa88c0100d72d709f093b0001</wd:ID>
+                    <wd:ID wd:type="National_Identifier_Reference_ID">NATIONAL_IDENTIFIER_REFERENCE-6-2166</wd:ID>
+                  </wd:National_ID_Shared_Reference>
+                </wd:National_ID>
+                <wd:National_ID>
+                  <wd:National_ID_Reference>
+                    <wd:ID wd:type="WID">e2645d3f88300100d3f5236584fd0000</wd:ID>
+                  </wd:National_ID_Reference>
+                  <wd:National_ID_Data>
+                    <wd:ID>333333334</wd:ID>
+                    <wd:ID_Type_Reference>
+                      <wd:ID wd:type="WID">93636994cfe84825a1daaa933cbba7e7</wd:ID>
+                      <wd:ID wd:type="National_ID_Type_Code">USA-SSN</wd:ID>
+                    </wd:ID_Type_Reference>
+                    <wd:Country_Reference>
+                      <wd:ID wd:type="WID">bc33aa3152ec42d4995f4791a106ed09</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-2_Code">US</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-3_Code">USA</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Numeric-3_Code">840</wd:ID>
+                    </wd:Country_Reference>
+                  </wd:National_ID_Data>
+                  <wd:National_ID_Shared_Reference>
+                    <wd:ID wd:type="WID">e2645d3f88300100d3f524006b700000</wd:ID>
+                    <wd:ID wd:type="National_Identifier_Reference_ID">NATIONAL_IDENTIFIER_REFERENCE-6-2172</wd:ID>
+                  </wd:National_ID_Shared_Reference>
+                </wd:National_ID>
+                <wd:National_ID>
+                  <wd:National_ID_Reference>
+                    <wd:ID wd:type="WID">115eb4a25e2d0100d69d7f08e3b90000</wd:ID>
+                  </wd:National_ID_Reference>
+                  <wd:National_ID_Data>
+                    <wd:ID>333333334</wd:ID>
+                    <wd:ID_Type_Reference>
+                      <wd:ID wd:type="WID">93636994cfe84825a1daaa933cbba7e7</wd:ID>
+                      <wd:ID wd:type="National_ID_Type_Code">USA-SSN</wd:ID>
+                    </wd:ID_Type_Reference>
+                    <wd:Country_Reference>
+                      <wd:ID wd:type="WID">bc33aa3152ec42d4995f4791a106ed09</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-2_Code">US</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-3_Code">USA</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Numeric-3_Code">840</wd:ID>
+                    </wd:Country_Reference>
+                  </wd:National_ID_Data>
+                  <wd:National_ID_Shared_Reference>
+                    <wd:ID wd:type="WID">115eb4a25e2d0100d69d7fa42eff0000</wd:ID>
+                    <wd:ID wd:type="National_Identifier_Reference_ID">NATIONAL_IDENTIFIER_REFERENCE-6-2182</wd:ID>
+                  </wd:National_ID_Shared_Reference>
+                </wd:National_ID>
+                <wd:National_ID>
+                  <wd:National_ID_Reference>
+                    <wd:ID wd:type="WID">115eb4a25e2d0100d6c01665daa10003</wd:ID>
+                  </wd:National_ID_Reference>
+                  <wd:National_ID_Data>
+                    <wd:ID>333333334</wd:ID>
+                    <wd:ID_Type_Reference>
+                      <wd:ID wd:type="WID">93636994cfe84825a1daaa933cbba7e7</wd:ID>
+                      <wd:ID wd:type="National_ID_Type_Code">USA-SSN</wd:ID>
+                    </wd:ID_Type_Reference>
+                    <wd:Country_Reference>
+                      <wd:ID wd:type="WID">bc33aa3152ec42d4995f4791a106ed09</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-2_Code">US</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Alpha-3_Code">USA</wd:ID>
+                      <wd:ID wd:type="ISO_3166-1_Numeric-3_Code">840</wd:ID>
+                    </wd:Country_Reference>
+                    <wd:Verification_Date>2022-05-23-07:00</wd:Verification_Date>
+                  </wd:National_ID_Data>
+                  <wd:National_ID_Shared_Reference>
+                    <wd:ID wd:type="WID">115eb4a25e2d0100d6c01665daa10004</wd:ID>
+                    <wd:ID wd:type="National_Identifier_Reference_ID">NATIONAL_IDENTIFIER_REFERENCE-6-2183</wd:ID>
+                  </wd:National_ID_Shared_Reference>
+                </wd:National_ID>
+              </wd:Identification_Data>
+              <wd:Contact_Data>
+                <wd:Address_Data wd:Effective_Date="2022-05-23-07:00" wd:Address_Format_Type="Basic" wd:Formatted_Address="111 Fake St&amp;#xa;Chicago, 60647&amp;#xa;United States of America" wd:Defaulted_Business_Site_Address="0">
+                  <wd:Country_Reference>
+                    <wd:ID wd:type="WID">bc33aa3152ec42d4995f4791a106ed09</wd:ID>
+                    <wd:ID wd:type="ISO_3166-1_Alpha-2_Code">US</wd:ID>
+                    <wd:ID wd:type="ISO_3166-1_Alpha-3_Code">USA</wd:ID>
+                    <wd:ID wd:type="ISO_3166-1_Numeric-3_Code">840</wd:ID>
+                  </wd:Country_Reference>
+                  <wd:Last_Modified>2022-05-23T11:34:37.084-07:00</wd:Last_Modified>
+                  <wd:Address_Line_Data wd:Type="ADDRESS_LINE_1" wd:Descriptor="Address Line 1">111 Fake St</wd:Address_Line_Data>
+                  <wd:Municipality>Chicago</wd:Municipality>
+                  <wd:Postal_Code>60647</wd:Postal_Code>
+                  <wd:Usage_Data wd:Public="0">
+                    <wd:Type_Data wd:Primary="1">
+                      <wd:Type_Reference>
+                        <wd:ID wd:type="WID">836cf00ef5974ac08b786079866c946f</wd:ID>
+                        <wd:ID wd:type="Communication_Usage_Type_ID">HOME</wd:ID>
+                      </wd:Type_Reference>
+                    </wd:Type_Data>
+                  </wd:Usage_Data>
+                  <wd:Address_Reference>
+                    <wd:ID wd:type="WID">888a3141b1b40100d0aeceeabee10000</wd:ID>
+                    <wd:ID wd:type="Address_ID">ADDRESS_REFERENCE-6-5969</wd:ID>
+                  </wd:Address_Reference>
+                  <wd:Address_ID>ADDRESS_REFERENCE-6-5969</wd:Address_ID>
+                </wd:Address_Data>
+                <wd:Phone_Data wd:Formatted_Phone="+1 (630) 8888888">
+                  <wd:Country_ISO_Code>USA</wd:Country_ISO_Code>
+                  <wd:International_Phone_Code>1</wd:International_Phone_Code>
+                  <wd:Area_Code>630</wd:Area_Code>
+                  <wd:Phone_Number>8888888</wd:Phone_Number>
+                  <wd:Phone_Device_Type_Reference>
+                    <wd:ID wd:type="WID">d691375437c848aea9d5b0874353bfd7</wd:ID>
+                    <wd:ID wd:type="Phone_Device_Type_ID">Mobile</wd:ID>
+                  </wd:Phone_Device_Type_Reference>
+                  <wd:Usage_Data wd:Public="0">
+                    <wd:Type_Data wd:Primary="1">
+                      <wd:Type_Reference>
+                        <wd:ID wd:type="WID">836cf00ef5974ac08b786079866c946f</wd:ID>
+                        <wd:ID wd:type="Communication_Usage_Type_ID">HOME</wd:ID>
+                      </wd:Type_Reference>
+                    </wd:Type_Data>
+                  </wd:Usage_Data>
+                </wd:Phone_Data>
+                <wd:Email_Address_Data>
+                  <wd:Email_Address>jwright@accurate.com</wd:Email_Address>
+                  <wd:Usage_Data wd:Public="0">
+                    <wd:Type_Data wd:Primary="1">
+                      <wd:Type_Reference>
+                        <wd:ID wd:type="WID">836cf00ef5974ac08b786079866c946f</wd:ID>
+                        <wd:ID wd:type="Communication_Usage_Type_ID">HOME</wd:ID>
+                      </wd:Type_Reference>
+                    </wd:Type_Data>
+                  </wd:Usage_Data>
+                </wd:Email_Address_Data>
+              </wd:Contact_Data>
+              <wd:Tobacco_Use>0</wd:Tobacco_Use>
+            </wd:Personal_Data>
+          </wd:Applicant_Data>
+        </wd:Applicant>
+      </wd:Response_Data>
+    </wd:Get_Applicants_Response>
+  </env:Body>
+</env:Envelope>

@@ -4,7 +4,8 @@
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
 # xsd-to-vb-class
-VbClassFileOutput/
+VbClassFileOutput/*
+SerializedXml/*
 
 # User-specific files
 *.rsuser

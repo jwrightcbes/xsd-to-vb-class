@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope 
+    xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Header>
+    <wd:Workday_Common_Header xmlns:wd="urn:com.workday/bsvc">
+      <wd:Include_Reference_Descriptors_In_Response>true</wd:Include_Reference_Descriptors_In_Response>
+    </wd:Workday_Common_Header>
+    <wsse:Security soapenv:mustUnderstand="1">
+      <wsse:UsernameToken>
+        <wsse:Username />
+        <wsse:Password 
+            Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText"></wsse:Password>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <wd:Get_Applicants_Request wd:version="" xmlns:wd="urn:com.workday/bsvc">
+      <wd:Request_References />
+    </wd:Get_Applicants_Request>
+  </soapenv:Body>
+</soapenv:Envelope>

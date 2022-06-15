@@ -7,6 +7,8 @@
         Public Property Opt As Boolean
         Public Property Multiple As Boolean
         Public Property Type As String
+        Public Property SimpleContentName As String
+        Public Property Order As String
 
         Sub New()
             Ref = False
@@ -16,6 +18,8 @@
             Attributes = New List(Of Attribute)
             Opt = True
             Multiple = False
+            SimpleContentName = String.Empty
+            Order = "0"
         End Sub
 
     End Class

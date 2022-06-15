@@ -8,7 +8,6 @@ Imports System.Xml.Serialization
 ' These are used in multiple different transactions dealing with Applicants.
 
 Namespace WorkDay
-
     <XmlRoot(ElementName:="Applicant_Reference", Namespace:="urn:com.workday/bsvc")>
     Public Class Applicant_Reference
 
@@ -16,7 +15,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -36,8 +35,8 @@ Namespace WorkDay
         <XmlAttribute(AttributeName:="System_ID", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
         Public Property System_ID As String
 
-        <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        <XmlText>
+        Public Property ID_Text As String
 
     End Class
 
@@ -49,7 +48,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -61,7 +60,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -73,10 +72,10 @@ Namespace WorkDay
         Public Property Title_Descriptor As String
 
         <XmlElement(ElementName:="Title_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Title_Reference As Title_Reference
+        Public Property Title_Reference() As Title_Reference()
 
         <XmlElement(ElementName:="Salutation_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Salutation_Reference As Salutation_Reference
+        Public Property Salutation_Reference() As Salutation_Reference()
 
     End Class
 
@@ -124,7 +123,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -136,7 +135,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -148,7 +147,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -160,7 +159,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -172,7 +171,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -184,7 +183,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -196,7 +195,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -208,25 +207,25 @@ Namespace WorkDay
         Public Property Social_Suffix_Descriptor As String
 
         <XmlElement(ElementName:="Social_Suffix_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Social_Suffix_Reference As Social_Suffix_Reference
+        Public Property Social_Suffix_Reference() As Social_Suffix_Reference()
 
         <XmlElement(ElementName:="Academic_Suffix_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Academic_Suffix_Reference As Academic_Suffix_Reference
+        Public Property Academic_Suffix_Reference() As Academic_Suffix_Reference()
 
         <XmlElement(ElementName:="Hereditary_Suffix_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Hereditary_Suffix_Reference As Hereditary_Suffix_Reference
+        Public Property Hereditary_Suffix_Reference() As Hereditary_Suffix_Reference()
 
         <XmlElement(ElementName:="Honorary_Suffix_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Honorary_Suffix_Reference As Honorary_Suffix_Reference
+        Public Property Honorary_Suffix_Reference() As Honorary_Suffix_Reference()
 
         <XmlElement(ElementName:="Professional_Suffix_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Professional_Suffix_Reference As Professional_Suffix_Reference
+        Public Property Professional_Suffix_Reference() As Professional_Suffix_Reference()
 
         <XmlElement(ElementName:="Religious_Suffix_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Religious_Suffix_Reference As Religious_Suffix_Reference
+        Public Property Religious_Suffix_Reference() As Religious_Suffix_Reference()
 
         <XmlElement(ElementName:="Royal_Suffix_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Royal_Suffix_Reference As Royal_Suffix_Reference
+        Public Property Royal_Suffix_Reference() As Royal_Suffix_Reference()
 
     End Class
 
@@ -239,6 +238,9 @@ Namespace WorkDay
 
         <XmlAttribute(AttributeName:="Reporting_Name", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
         Public Property Reporting_Name As String
+
+        <XmlElement(ElementName:="Country_Reference", Namespace:="urn:com.workday/bsvc")>
+        Public Property Country_Reference() As Country_Reference()
 
         <XmlElement(ElementName:="First_Name", Namespace:="urn:com.workday/bsvc")>
         Public Property First_Name As String
@@ -258,17 +260,14 @@ Namespace WorkDay
         <XmlElement(ElementName:="Full_Name_for_Singapore_and_Malaysia", Namespace:="urn:com.workday/bsvc")>
         Public Property Full_Name_for_Singapore_and_Malaysia As String
 
-        <XmlElement(ElementName:="Country_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Country_Reference As Country_Reference
-
         <XmlElement(ElementName:="Prefix_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Prefix_Data As Prefix_Data
+        Public Property Prefix_Data() As Prefix_Data()
 
         <XmlElement(ElementName:="Local_Name_Detail_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Local_Name_Detail_Data As Local_Name_Detail_Data
+        Public Property Local_Name_Detail_Data() As Local_Name_Detail_Data()
 
         <XmlElement(ElementName:="Suffix_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Suffix_Data As Suffix_Data
+        Public Property Suffix_Data() As Suffix_Data()
 
     End Class
 
@@ -280,7 +279,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -292,7 +291,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -304,7 +303,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -316,7 +315,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -328,7 +327,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -342,6 +341,9 @@ Namespace WorkDay
         <XmlAttribute(AttributeName:="Type", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
         Public Property Type As String
 
+        <XmlText>
+        Public Property Address_Line_Data_Text As String
+
     End Class
 
 
@@ -352,7 +354,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -366,8 +368,8 @@ Namespace WorkDay
         <XmlAttribute(AttributeName:="Type", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
         Public Property Type As String
 
-        <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        <XmlText>
+        Public Property Submunicipality_Data_Text As String
 
     End Class
 
@@ -381,8 +383,8 @@ Namespace WorkDay
         <XmlAttribute(AttributeName:="Type", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
         Public Property Type As String
 
-        <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        <XmlText>
+        Public Property Subregion_Data_Text As String
 
     End Class
 
@@ -394,16 +396,13 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
 
     <XmlRoot(ElementName:="Address_Data", Namespace:="urn:com.workday/bsvc")>
     Public Class Address_Data
-
-        <XmlAttribute(AttributeName:="Formatted_Address", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
-        Public Property Formatted_Address As String
 
         <XmlAttribute(AttributeName:="Address_Format_Type", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
         Public Property Address_Format_Type As String
@@ -420,8 +419,17 @@ Namespace WorkDay
         <XmlAttribute(AttributeName:="Effective_Date", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
         Public Property Effective_Date As String
 
+        <XmlAttribute(AttributeName:="Formatted_Address", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
+        Public Property Formatted_Address As String
+
+        <XmlElement(ElementName:="Country_Reference", Namespace:="urn:com.workday/bsvc")>
+        Public Property Country_Reference() As Country_Reference()
+
         <XmlElement(ElementName:="Last_Modified", Namespace:="urn:com.workday/bsvc")>
         Public Property Last_Modified As String
+
+        <XmlElement(ElementName:="Address_Line_Data", Namespace:="urn:com.workday/bsvc")>
+        Public Property Address_Line_Data() As Address_Line_Data()
 
         <XmlElement(ElementName:="Municipality", Namespace:="urn:com.workday/bsvc")>
         Public Property Municipality As String
@@ -436,34 +444,28 @@ Namespace WorkDay
         Public Property Number_of_Days As String
 
         <XmlElement(ElementName:="Municipality_Local", Namespace:="urn:com.workday/bsvc")>
-        Public Property Municipality_Local As String
-
-        <XmlElement(ElementName:="Address_ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property Address_ID As String
-
-        <XmlElement(ElementName:="Country_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Country_Reference As Country_Reference
-
-        <XmlElement(ElementName:="Address_Line_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Address_Line_Data As Address_Line_Data
+        Public Property Municipality_Local As String               
 
         <XmlElement(ElementName:="Country_City_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Country_City_Reference As Country_City_Reference
+        Public Property Country_City_Reference() As Country_City_Reference()
 
         <XmlElement(ElementName:="Submunicipality_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Submunicipality_Data As Submunicipality_Data
+        Public Property Submunicipality_Data() As Submunicipality_Data()
 
         <XmlElement(ElementName:="Country_Region_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Country_Region_Reference As Country_Region_Reference
+        Public Property Country_Region_Reference() As Country_Region_Reference()
 
         <XmlElement(ElementName:="Subregion_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Subregion_Data As Subregion_Data
+        Public Property Subregion_Data() As Subregion_Data()
 
         <XmlElement(ElementName:="Usage_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Usage_Data As Usage_Data
+        Public Property Usage_Data() As Usage_Data()
 
         <XmlElement(ElementName:="Address_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Address_Reference As Address_Reference
+        Public Property Address_Reference() As Address_Reference()
+
+        <XmlElement(ElementName:="Address_ID", Namespace:="urn:com.workday/bsvc")>
+        Public Property Address_ID As String 
 
     End Class
 
@@ -475,7 +477,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -487,7 +489,7 @@ Namespace WorkDay
         Public Property Primary As String
 
         <XmlElement(ElementName:="Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Type_Reference As Type_Reference
+        Public Property Type_Reference() As Type_Reference()
 
     End Class
 
@@ -499,7 +501,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -511,7 +513,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -526,13 +528,13 @@ Namespace WorkDay
         Public Property Comments As String
 
         <XmlElement(ElementName:="Type_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Type_Data As Type_Data
+        Public Property Type_Data() As Type_Data()
 
         <XmlElement(ElementName:="Use_For_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Use_For_Reference As Use_For_Reference
+        Public Property Use_For_Reference() As Use_For_Reference()
 
         <XmlElement(ElementName:="Use_For_Tenanted_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Use_For_Tenanted_Reference As Use_For_Tenanted_Reference
+        Public Property Use_For_Tenanted_Reference() As Use_For_Tenanted_Reference()
 
     End Class
 
@@ -544,7 +546,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -556,7 +558,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -565,25 +567,7 @@ Namespace WorkDay
     Public Class Phone_Data
 
         <XmlAttribute(AttributeName:="Area_Code", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
-        Public Property Area_Code As String
-
-        <XmlAttribute(AttributeName:="Tenant_Formatted_Phone", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
-        Public Property Tenant_Formatted_Phone As String
-
-        <XmlAttribute(AttributeName:="International_Formatted_Phone", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
-        Public Property International_Formatted_Phone As String
-
-        <XmlAttribute(AttributeName:="Phone_Number_Without_Area_Code", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
-        Public Property Phone_Number_Without_Area_Code As String
-
-        <XmlAttribute(AttributeName:="National_Formatted_Phone", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
-        Public Property National_Formatted_Phone As String
-
-        <XmlAttribute(AttributeName:="E164_Formatted_Phone", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
-        Public Property E164_Formatted_Phone As String
-
-        <XmlAttribute(AttributeName:="Workday_Traditional_Formatted_Phone", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
-        Public Property Workday_Traditional_Formatted_Phone As String
+        Public Property attArea_Code As String
 
         <XmlAttribute(AttributeName:="Delete", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
         Public Property Delete As String
@@ -591,11 +575,35 @@ Namespace WorkDay
         <XmlAttribute(AttributeName:="Do_Not_Replace_All", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
         Public Property Do_Not_Replace_All As String
 
+        <XmlAttribute(AttributeName:="Formatted_Phone", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
+        Public Property Formatted_Phone As String
+
+        <XmlAttribute(AttributeName:="E164_Formatted_Phone", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
+        Public Property E164_Formatted_Phone As String
+
+        <XmlAttribute(AttributeName:="International_Formatted_Phone", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
+        Public Property International_Formatted_Phone As String
+
+        <XmlAttribute(AttributeName:="National_Formatted_Phone", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
+        Public Property National_Formatted_Phone As String
+
+        <XmlAttribute(AttributeName:="Phone_Number_Without_Area_Code", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
+        Public Property Phone_Number_Without_Area_Code As String
+
+        <XmlAttribute(AttributeName:="Tenant_Formatted_Phone", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
+        Public Property Tenant_Formatted_Phone As String
+
+        <XmlAttribute(AttributeName:="Workday_Traditional_Formatted_Phone", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
+        Public Property Workday_Traditional_Formatted_Phone As String
+
         <XmlElement(ElementName:="Country_ISO_Code", Namespace:="urn:com.workday/bsvc")>
         Public Property Country_ISO_Code As String
 
         <XmlElement(ElementName:="International_Phone_Code", Namespace:="urn:com.workday/bsvc")>
         Public Property International_Phone_Code As String
+
+        <XmlElement(ElementName:="Area_Code", Namespace:="urn:com.workday/bsvc")>
+        Public Property Area_Code As String
 
         <XmlElement(ElementName:="Phone_Number", Namespace:="urn:com.workday/bsvc")>
         Public Property Phone_Number As String
@@ -607,13 +615,13 @@ Namespace WorkDay
         Public Property ID As String
 
         <XmlElement(ElementName:="Phone_Device_Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Phone_Device_Type_Reference As Phone_Device_Type_Reference
+        Public Property Phone_Device_Type_Reference() As Phone_Device_Type_Reference()
 
         <XmlElement(ElementName:="Usage_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Usage_Data As Usage_Data
+        Public Property Usage_Data() As Usage_Data()
 
         <XmlElement(ElementName:="Phone_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Phone_Reference As Phone_Reference
+        Public Property Phone_Reference() As Phone_Reference()
 
     End Class
 
@@ -625,7 +633,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -649,10 +657,10 @@ Namespace WorkDay
         Public Property ID As String
 
         <XmlElement(ElementName:="Usage_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Usage_Data As Usage_Data
+        Public Property Usage_Data() As Usage_Data()
 
         <XmlElement(ElementName:="Email_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Email_Reference As Email_Reference
+        Public Property Email_Reference() As Email_Reference()
 
     End Class
 
@@ -664,7 +672,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -676,7 +684,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -700,13 +708,13 @@ Namespace WorkDay
         Public Property ID As String
 
         <XmlElement(ElementName:="Instant_Messenger_Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Instant_Messenger_Type_Reference As Instant_Messenger_Type_Reference
+        Public Property Instant_Messenger_Type_Reference() As Instant_Messenger_Type_Reference()
 
         <XmlElement(ElementName:="Usage_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Usage_Data As Usage_Data
+        Public Property Usage_Data() As Usage_Data()
 
         <XmlElement(ElementName:="Instant_Messenger_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Instant_Messenger_Reference As Instant_Messenger_Reference
+        Public Property Instant_Messenger_Reference() As Instant_Messenger_Reference()
 
     End Class
 
@@ -718,7 +726,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -742,10 +750,10 @@ Namespace WorkDay
         Public Property ID As String
 
         <XmlElement(ElementName:="Usage_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Usage_Data As Usage_Data
+        Public Property Usage_Data() As Usage_Data()
 
         <XmlElement(ElementName:="Web_Address_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Web_Address_Reference As Web_Address_Reference
+        Public Property Web_Address_Reference() As Web_Address_Reference()
 
     End Class
 
@@ -757,7 +765,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -769,7 +777,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -778,7 +786,7 @@ Namespace WorkDay
     Public Class Request_References
 
         <XmlElement(ElementName:="Applicant_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Applicant_Reference As Applicant_Reference
+        Public Property Applicant_Reference() As Applicant_Reference()
 
     End Class
 
@@ -790,7 +798,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -802,7 +810,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -814,7 +822,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -823,7 +831,7 @@ Namespace WorkDay
     Public Class Field_And_Parameter_Criteria_Data
 
         <XmlElement(ElementName:="Provider_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Provider_Reference As Provider_Reference
+        Public Property Provider_Reference() As Provider_Reference()
 
     End Class
 
@@ -835,13 +843,13 @@ Namespace WorkDay
         Public Property Email_Address As String
 
         <XmlElement(ElementName:="Worker_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Worker_Reference As Worker_Reference
+        Public Property Worker_Reference() As Worker_Reference()
 
         <XmlElement(ElementName:="Former_Worker_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Former_Worker_Reference As Former_Worker_Reference
+        Public Property Former_Worker_Reference() As Former_Worker_Reference()
 
         <XmlElement(ElementName:="Field_And_Parameter_Criteria_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Field_And_Parameter_Criteria_Data As Field_And_Parameter_Criteria_Data
+        Public Property Field_And_Parameter_Criteria_Data() As Field_And_Parameter_Criteria_Data()
 
     End Class
 
@@ -913,7 +921,7 @@ Namespace WorkDay
     Public Class Legal_Name_Data
 
         <XmlElement(ElementName:="Name_Detail_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Name_Detail_Data As Name_Detail_Data
+        Public Property Name_Detail_Data() As Name_Detail_Data()
 
     End Class
 
@@ -922,7 +930,7 @@ Namespace WorkDay
     Public Class Preferred_Name_Data
 
         <XmlElement(ElementName:="Name_Detail_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Name_Detail_Data As Name_Detail_Data
+        Public Property Name_Detail_Data() As Name_Detail_Data()
 
     End Class
 
@@ -934,7 +942,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -943,10 +951,10 @@ Namespace WorkDay
     Public Class Additional_Name_Data
 
         <XmlElement(ElementName:="Name_Detail_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Name_Detail_Data As Name_Detail_Data
+        Public Property Name_Detail_Data() As Name_Detail_Data()
 
         <XmlElement(ElementName:="Name_Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Name_Type_Reference As Name_Type_Reference
+        Public Property Name_Type_Reference() As Name_Type_Reference()
 
     End Class
 
@@ -955,13 +963,13 @@ Namespace WorkDay
     Public Class Name_Data
 
         <XmlElement(ElementName:="Legal_Name_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Legal_Name_Data As Legal_Name_Data
+        Public Property Legal_Name_Data() As Legal_Name_Data()
 
         <XmlElement(ElementName:="Preferred_Name_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Preferred_Name_Data As Preferred_Name_Data
+        Public Property Preferred_Name_Data() As Preferred_Name_Data()
 
         <XmlElement(ElementName:="Additional_Name_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Additional_Name_Data As Additional_Name_Data
+        Public Property Additional_Name_Data() As Additional_Name_Data()
 
     End Class
 
@@ -973,7 +981,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -985,7 +993,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -997,7 +1005,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1009,7 +1017,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1021,7 +1029,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1033,7 +1041,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1045,7 +1053,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1057,7 +1065,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1069,7 +1077,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1081,7 +1089,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1093,7 +1101,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1105,7 +1113,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1162,22 +1170,22 @@ Namespace WorkDay
         Public Property Note As String
 
         <XmlElement(ElementName:="Disability_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Disability_Reference As Disability_Reference
+        Public Property Disability_Reference() As Disability_Reference()
 
         <XmlElement(ElementName:="Disability_Grade_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Disability_Grade_Reference As Disability_Grade_Reference
+        Public Property Disability_Grade_Reference() As Disability_Grade_Reference()
 
         <XmlElement(ElementName:="Disability_Certification_Authority_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Disability_Certification_Authority_Reference As Disability_Certification_Authority_Reference
+        Public Property Disability_Certification_Authority_Reference() As Disability_Certification_Authority_Reference()
 
         <XmlElement(ElementName:="Disability_Certification_Basis_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Disability_Certification_Basis_Reference As Disability_Certification_Basis_Reference
+        Public Property Disability_Certification_Basis_Reference() As Disability_Certification_Basis_Reference()
 
         <XmlElement(ElementName:="Worker_Document_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Worker_Document_Reference As Worker_Document_Reference
+        Public Property Worker_Document_Reference() As Worker_Document_Reference()
 
         <XmlElement(ElementName:="Disability_Status_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Disability_Status_Reference As Disability_Status_Reference
+        Public Property Disability_Status_Reference() As Disability_Status_Reference()
 
     End Class
 
@@ -1189,7 +1197,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1201,7 +1209,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1213,7 +1221,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1225,7 +1233,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1237,7 +1245,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1249,7 +1257,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1261,7 +1269,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1273,7 +1281,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1285,7 +1293,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1297,7 +1305,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1309,7 +1317,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1321,7 +1329,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1339,16 +1347,16 @@ Namespace WorkDay
         Public Property Notes As String
 
         <XmlElement(ElementName:="Status_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Status_Reference As Status_Reference
+        Public Property Status_Reference() As Status_Reference()
 
         <XmlElement(ElementName:="Military_Service_Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Military_Service_Type_Reference As Military_Service_Type_Reference
+        Public Property Military_Service_Type_Reference() As Military_Service_Type_Reference()
 
         <XmlElement(ElementName:="Military_Rank_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Military_Rank_Reference As Military_Rank_Reference
+        Public Property Military_Rank_Reference() As Military_Rank_Reference()
 
         <XmlElement(ElementName:="Military_Service_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Military_Service_Reference As Military_Service_Reference
+        Public Property Military_Service_Reference() As Military_Service_Reference()
 
     End Class
 
@@ -1360,7 +1368,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1377,9 +1385,6 @@ Namespace WorkDay
         <XmlElement(ElementName:="Expiration_Date", Namespace:="urn:com.workday/bsvc")>
         Public Property Expiration_Date As String
 
-        <XmlElement(ElementName:="Verification_Date", Namespace:="urn:com.workday/bsvc")>
-        Public Property Verification_Date As String
-
         <XmlElement(ElementName:="Series", Namespace:="urn:com.workday/bsvc")>
         Public Property Series As String
 
@@ -1387,13 +1392,16 @@ Namespace WorkDay
         Public Property Issuing_Agency As String
 
         <XmlElement(ElementName:="ID_Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID_Type_Reference As ID_Type_Reference
+        Public Property ID_Type_Reference() As ID_Type_Reference()
 
         <XmlElement(ElementName:="Country_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Country_Reference As Country_Reference
+        Public Property Country_Reference() As Country_Reference()
+
+        <XmlElement(ElementName:="Verification_Date", Namespace:="urn:com.workday/bsvc")>
+        Public Property Verification_Date As String
 
         <XmlElement(ElementName:="Verified_By_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Verified_By_Reference As Verified_By_Reference
+        Public Property Verified_By_Reference() As Verified_By_Reference()
 
     End Class
 
@@ -1405,7 +1413,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1417,13 +1425,13 @@ Namespace WorkDay
         Public Property Delete As String
 
         <XmlElement(ElementName:="National_ID_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property National_ID_Reference As National_ID_Reference
+        Public Property National_ID_Reference() As National_ID_Reference()
 
         <XmlElement(ElementName:="National_ID_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property National_ID_Data As National_ID_Data
+        Public Property National_ID_Data() As National_ID_Data()
 
         <XmlElement(ElementName:="National_ID_Shared_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property National_ID_Shared_Reference As National_ID_Shared_Reference
+        Public Property National_ID_Shared_Reference() As National_ID_Shared_Reference()
 
     End Class
 
@@ -1435,7 +1443,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1456,13 +1464,13 @@ Namespace WorkDay
         Public Property Verification_Date As String
 
         <XmlElement(ElementName:="ID_Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID_Type_Reference As ID_Type_Reference
+        Public Property ID_Type_Reference() As ID_Type_Reference()
 
         <XmlElement(ElementName:="Country_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Country_Reference As Country_Reference
+        Public Property Country_Reference() As Country_Reference()
 
         <XmlElement(ElementName:="Verified_by_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Verified_by_Reference As Verified_By_Reference
+        Public Property Verified_by_Reference() As Verified_By_Reference()
 
     End Class
 
@@ -1474,7 +1482,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1486,13 +1494,13 @@ Namespace WorkDay
         Public Property Delete As String
 
         <XmlElement(ElementName:="Government_ID_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Government_ID_Reference As Government_ID_Reference
+        Public Property Government_ID_Reference() As Government_ID_Reference()
 
         <XmlElement(ElementName:="Government_ID_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Government_ID_Data As Government_ID_Data
+        Public Property Government_ID_Data() As Government_ID_Data()
 
         <XmlElement(ElementName:="Government_ID_Shared_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Government_ID_Shared_Reference As Government_ID_Shared_Reference
+        Public Property Government_ID_Shared_Reference() As Government_ID_Shared_Reference()
 
     End Class
 
@@ -1504,7 +1512,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1525,13 +1533,13 @@ Namespace WorkDay
         Public Property Verification_Date As String
 
         <XmlElement(ElementName:="ID_Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID_Type_Reference As ID_Type_Reference
+        Public Property ID_Type_Reference() As ID_Type_Reference()
 
         <XmlElement(ElementName:="Country_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Country_Reference As Country_Reference
+        Public Property Country_Reference() As Country_Reference()
 
         <XmlElement(ElementName:="Verified_By_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Verified_By_Reference As Verified_By_Reference
+        Public Property Verified_By_Reference() As Verified_By_Reference()
 
     End Class
 
@@ -1543,7 +1551,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1555,13 +1563,13 @@ Namespace WorkDay
         Public Property Delete As String
 
         <XmlElement(ElementName:="Visa_ID_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Visa_ID_Reference As Visa_ID_Reference
+        Public Property Visa_ID_Reference() As Visa_ID_Reference()
 
         <XmlElement(ElementName:="Visa_ID_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Visa_ID_Data As Visa_ID_Data
+        Public Property Visa_ID_Data() As Visa_ID_Data()
 
         <XmlElement(ElementName:="Visa_ID_Shared_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Visa_ID_Shared_Reference As Visa_ID_Shared_Reference
+        Public Property Visa_ID_Shared_Reference() As Visa_ID_Shared_Reference()
 
     End Class
 
@@ -1573,7 +1581,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1594,13 +1602,13 @@ Namespace WorkDay
         Public Property Verification_Date As String
 
         <XmlElement(ElementName:="ID_Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID_Type_Reference As ID_Type_Reference
+        Public Property ID_Type_Reference() As ID_Type_Reference()
 
         <XmlElement(ElementName:="Country_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Country_Reference As Country_Reference
+        Public Property Country_Reference() As Country_Reference()
 
         <XmlElement(ElementName:="Verified_By_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Verified_By_Reference As Verified_By_Reference
+        Public Property Verified_By_Reference() As Verified_By_Reference()
 
     End Class
 
@@ -1612,7 +1620,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1624,13 +1632,13 @@ Namespace WorkDay
         Public Property Delete As String
 
         <XmlElement(ElementName:="Passport_ID_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Passport_ID_Reference As Passport_ID_Reference
+        Public Property Passport_ID_Reference() As Passport_ID_Reference()
 
         <XmlElement(ElementName:="Passport_ID_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Passport_ID_Data As Passport_ID_Data
+        Public Property Passport_ID_Data() As Passport_ID_Data()
 
         <XmlElement(ElementName:="Passport_ID_Shared_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Passport_ID_Shared_Reference As Passport_ID_Shared_Reference
+        Public Property Passport_ID_Shared_Reference() As Passport_ID_Shared_Reference()
 
     End Class
 
@@ -1642,7 +1650,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1654,7 +1662,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1681,19 +1689,19 @@ Namespace WorkDay
         Public Property Verification_Date As String
 
         <XmlElement(ElementName:="ID_Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID_Type_Reference As ID_Type_Reference
+        Public Property ID_Type_Reference() As ID_Type_Reference()
 
         <XmlElement(ElementName:="Country_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Country_Reference As Country_Reference
+        Public Property Country_Reference() As Country_Reference()
 
         <XmlElement(ElementName:="Country_Region_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Country_Region_Reference As Country_Region_Reference
+        Public Property Country_Region_Reference() As Country_Region_Reference()
 
         <XmlElement(ElementName:="Authority_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Authority_Reference As Authority_Reference
+        Public Property Authority_Reference() As Authority_Reference()
 
         <XmlElement(ElementName:="Verified_By_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Verified_By_Reference As Verified_By_Reference
+        Public Property Verified_By_Reference() As Verified_By_Reference()
 
     End Class
 
@@ -1705,7 +1713,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1717,13 +1725,13 @@ Namespace WorkDay
         Public Property Delete As String
 
         <XmlElement(ElementName:="License_ID_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property License_ID_Reference As License_ID_Reference
+        Public Property License_ID_Reference() As License_ID_Reference()
 
         <XmlElement(ElementName:="License_ID_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property License_ID_Data As License_ID_Data
+        Public Property License_ID_Data() As License_ID_Data()
 
         <XmlElement(ElementName:="License_ID_Shared_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property License_ID_Shared_Reference As License_ID_Shared_Reference
+        Public Property License_ID_Shared_Reference() As License_ID_Shared_Reference()
 
     End Class
 
@@ -1735,7 +1743,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1747,7 +1755,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1768,10 +1776,10 @@ Namespace WorkDay
         Public Property Custom_Description As String
 
         <XmlElement(ElementName:="ID_Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID_Type_Reference As ID_Type_Reference
+        Public Property ID_Type_Reference() As ID_Type_Reference()
 
         <XmlElement(ElementName:="Organization_ID_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Organization_ID_Reference As Organization_ID_Reference
+        Public Property Organization_ID_Reference() As Organization_ID_Reference()
 
     End Class
 
@@ -1783,7 +1791,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1795,13 +1803,13 @@ Namespace WorkDay
         Public Property Delete As String
 
         <XmlElement(ElementName:="Custom_ID_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Custom_ID_Reference As Custom_ID_Reference
+        Public Property Custom_ID_Reference() As Custom_ID_Reference()
 
         <XmlElement(ElementName:="Custom_ID_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Custom_ID_Data As Custom_ID_Data
+        Public Property Custom_ID_Data() As Custom_ID_Data()
 
         <XmlElement(ElementName:="Custom_ID_Shared_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Custom_ID_Shared_Reference As Custom_ID_Shared_Reference
+        Public Property Custom_ID_Shared_Reference() As Custom_ID_Shared_Reference()
 
     End Class
 
@@ -1810,22 +1818,22 @@ Namespace WorkDay
     Public Class Identification_Data
 
         <XmlElement(ElementName:="National_ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property National_ID As National_ID
+        Public Property National_ID() As National_ID()
 
         <XmlElement(ElementName:="Government_ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property Government_ID As Government_ID
+        Public Property Government_ID() As Government_ID()
 
         <XmlElement(ElementName:="Visa_ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property Visa_ID As Visa_ID
+        Public Property Visa_ID() As Visa_ID()
 
         <XmlElement(ElementName:="Passport_ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property Passport_ID As Passport_ID
+        Public Property Passport_ID() As Passport_ID()
 
         <XmlElement(ElementName:="License_ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property License_ID As License_ID
+        Public Property License_ID() As License_ID()
 
         <XmlElement(ElementName:="Custom_ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property Custom_ID As Custom_ID
+        Public Property Custom_ID() As Custom_ID()
 
     End Class
 
@@ -1834,19 +1842,19 @@ Namespace WorkDay
     Public Class Contact_Data
 
         <XmlElement(ElementName:="Address_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Address_Data As Address_Data
+        Public Property Address_Data() As Address_Data()
 
         <XmlElement(ElementName:="Phone_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Phone_Data As Phone_Data
+        Public Property Phone_Data() As Phone_Data()
 
         <XmlElement(ElementName:="Email_Address_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Email_Address_Data As Email_Address_Data
+        Public Property Email_Address_Data() As Email_Address_Data()
 
         <XmlElement(ElementName:="Instant_Messenger_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Instant_Messenger_Data As Instant_Messenger_Data
+        Public Property Instant_Messenger_Data() As Instant_Messenger_Data()
 
         <XmlElement(ElementName:="Web_Address_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Web_Address_Data As Web_Address_Data
+        Public Property Web_Address_Data() As Web_Address_Data()
 
     End Class
 
@@ -1858,7 +1866,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1870,7 +1878,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1882,7 +1890,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1894,7 +1902,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -1906,13 +1914,13 @@ Namespace WorkDay
         Public Property Delete As String
 
         <XmlElement(ElementName:="Relative_Name_Reference_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Relative_Name_Reference_Reference As Relative_Name_Reference_Reference
+        Public Property Relative_Name_Reference_Reference() As Relative_Name_Reference_Reference()
 
         <XmlElement(ElementName:="Relative_Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Relative_Type_Reference As Relative_Type_Reference
+        Public Property Relative_Type_Reference() As Relative_Type_Reference()
 
         <XmlElement(ElementName:="Name_Detail_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Name_Detail_Data As Name_Detail_Data
+        Public Property Name_Detail_Data() As Name_Detail_Data()
 
     End Class
 
@@ -1924,7 +1932,7 @@ Namespace WorkDay
         Public Property Replace_All As String
 
         <XmlElement(ElementName:="Relative_Name_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Relative_Name_Data As Relative_Name_Data
+        Public Property Relative_Name_Data() As Relative_Name_Data()
 
     End Class
 
@@ -1934,9 +1942,6 @@ Namespace WorkDay
 
         <XmlElement(ElementName:="Universal_ID", Namespace:="urn:com.workday/bsvc")>
         Public Property Universal_ID As String
-
-        <XmlElement(ElementName:="Birth_Date", Namespace:="urn:com.workday/bsvc")>
-        Public Property Birth_Date As String
 
         <XmlElement(ElementName:="Date_of_Death", Namespace:="urn:com.workday/bsvc")>
         Public Property Date_of_Death As String
@@ -1977,77 +1982,80 @@ Namespace WorkDay
         <XmlElement(ElementName:="Medical_Exam_Notes", Namespace:="urn:com.workday/bsvc")>
         Public Property Medical_Exam_Notes As String
 
-        <XmlElement(ElementName:="Tobacco_Use", Namespace:="urn:com.workday/bsvc")>
-        Public Property Tobacco_Use As String
-
         <XmlElement(ElementName:="Name_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Name_Data As Name_Data
+        Public Property Name_Data() As Name_Data()
+
+        <XmlElement(ElementName:="Birth_Date", Namespace:="urn:com.workday/bsvc")>
+        Public Property Birth_Date As String
 
         <XmlElement(ElementName:="Gender_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Gender_Reference As Gender_Reference
+        Public Property Gender_Reference() As Gender_Reference()
 
         <XmlElement(ElementName:="Country_of_Birth_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Country_of_Birth_Reference As Country_of_Birth_Reference
+        Public Property Country_of_Birth_Reference() As Country_of_Birth_Reference()
 
         <XmlElement(ElementName:="Region_of_Birth_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Region_of_Birth_Reference As Region_of_Birth_Reference
+        Public Property Region_of_Birth_Reference() As Region_of_Birth_Reference()
 
         <XmlElement(ElementName:="City_of_Birth_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property City_of_Birth_Reference As City_of_Birth_Reference
+        Public Property City_of_Birth_Reference() As City_of_Birth_Reference()
 
         <XmlElement(ElementName:="Marital_Status_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Marital_Status_Reference As Marital_Status_Reference
+        Public Property Marital_Status_Reference() As Marital_Status_Reference()
 
         <XmlElement(ElementName:="Religion_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Religion_Reference As Religion_Reference
+        Public Property Religion_Reference() As Religion_Reference()
 
         <XmlElement(ElementName:="Disability_Status_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Disability_Status_Data As Disability_Status_Data
+        Public Property Disability_Status_Data() As Disability_Status_Data()
 
         <XmlElement(ElementName:="Ethnicity_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Ethnicity_Reference As Ethnicity_Reference
+        Public Property Ethnicity_Reference() As Ethnicity_Reference()
 
         <XmlElement(ElementName:="Citizenship_Status_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Citizenship_Status_Reference As Citizenship_Status_Reference
+        Public Property Citizenship_Status_Reference() As Citizenship_Status_Reference()
 
         <XmlElement(ElementName:="Primary_Nationality_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Primary_Nationality_Reference As Primary_Nationality_Reference
+        Public Property Primary_Nationality_Reference() As Primary_Nationality_Reference()
 
         <XmlElement(ElementName:="Additional_Nationality_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Additional_Nationality_Reference As Additional_Nationality_Reference
+        Public Property Additional_Nationality_Reference() As Additional_Nationality_Reference()
 
         <XmlElement(ElementName:="Hukou_Region_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Hukou_Region_Reference As Hukou_Region_Reference
+        Public Property Hukou_Region_Reference() As Hukou_Region_Reference()
 
         <XmlElement(ElementName:="Hukou_Subregion_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Hukou_Subregion_Reference As Hukou_Subregion_Reference
+        Public Property Hukou_Subregion_Reference() As Hukou_Subregion_Reference()
 
         <XmlElement(ElementName:="Hukou_Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Hukou_Type_Reference As Hukou_Type_Reference
+        Public Property Hukou_Type_Reference() As Hukou_Type_Reference()
 
         <XmlElement(ElementName:="Native_Region_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Native_Region_Reference As Native_Region_Reference
+        Public Property Native_Region_Reference() As Native_Region_Reference()
 
         <XmlElement(ElementName:="Blood_Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Blood_Type_Reference As Blood_Type_Reference
+        Public Property Blood_Type_Reference() As Blood_Type_Reference()
 
         <XmlElement(ElementName:="Military_Service_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Military_Service_Data As Military_Service_Data
+        Public Property Military_Service_Data() As Military_Service_Data()
 
         <XmlElement(ElementName:="Identification_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Identification_Data As Identification_Data
+        Public Property Identification_Data() As Identification_Data()
 
         <XmlElement(ElementName:="Contact_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Contact_Data As Contact_Data
+        Public Property Contact_Data() As Contact_Data()
 
         <XmlElement(ElementName:="Political_Affiliation_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Political_Affiliation_Reference As Political_Affiliation_Reference
+        Public Property Political_Affiliation_Reference() As Political_Affiliation_Reference()
 
         <XmlElement(ElementName:="Social_Benefits_Locality_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Social_Benefits_Locality_Reference As Social_Benefits_Locality_Reference
+        Public Property Social_Benefits_Locality_Reference() As Social_Benefits_Locality_Reference()
 
         <XmlElement(ElementName:="Relative_Name_Information_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Relative_Name_Information_Data As Relative_Name_Information_Data
+        Public Property Relative_Name_Information_Data() As Relative_Name_Information_Data()
+
+        <XmlElement(ElementName:="Tobacco_Use", Namespace:="urn:com.workday/bsvc")>
+        Public Property Tobacco_Use As String
 
     End Class
 
@@ -2059,7 +2067,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2071,7 +2079,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2110,7 +2118,7 @@ Namespace WorkDay
         Public Property Contact As String
 
         <XmlElement(ElementName:="Job_History_Company_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Job_History_Company_Reference As Job_History_Company_Reference
+        Public Property Job_History_Company_Reference() As Job_History_Company_Reference()
 
     End Class
 
@@ -2119,10 +2127,10 @@ Namespace WorkDay
     Public Class External_Job_History
 
         <XmlElement(ElementName:="Job_History_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Job_History_Reference As Job_History_Reference
+        Public Property Job_History_Reference() As Job_History_Reference()
 
         <XmlElement(ElementName:="Job_History_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Job_History_Data As Job_History_Data
+        Public Property Job_History_Data() As Job_History_Data()
 
     End Class
 
@@ -2134,7 +2142,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2146,7 +2154,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2158,7 +2166,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2182,13 +2190,13 @@ Namespace WorkDay
         Public Property Competency_Descriptor As String
 
         <XmlElement(ElementName:="Competency_Level_Behavior_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Competency_Level_Behavior_Reference As Competency_Level_Behavior_Reference
+        Public Property Competency_Level_Behavior_Reference() As Competency_Level_Behavior_Reference()
 
         <XmlElement(ElementName:="Assessed_By_Person_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Assessed_By_Person_Reference As Assessed_By_Person_Reference
+        Public Property Assessed_By_Person_Reference() As Assessed_By_Person_Reference()
 
         <XmlElement(ElementName:="Competency_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Competency_Reference As Competency_Reference
+        Public Property Competency_Reference() As Competency_Reference()
 
     End Class
 
@@ -2200,7 +2208,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2212,7 +2220,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2227,10 +2235,10 @@ Namespace WorkDay
         Public Property End_Date As String
 
         <XmlElement(ElementName:="Specialty_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Specialty_Reference As Specialty_Reference
+        Public Property Specialty_Reference() As Specialty_Reference()
 
         <XmlElement(ElementName:="Subspecialty_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Subspecialty_Reference As Subspecialty_Reference
+        Public Property Subspecialty_Reference() As Subspecialty_Reference()
 
     End Class
 
@@ -2251,7 +2259,7 @@ Namespace WorkDay
         Public Property Content_Type As String
 
         <XmlElement(ElementName:="Document_Category_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Document_Category_Reference As Document_Category_Reference
+        Public Property Document_Category_Reference() As Document_Category_Reference()
 
     End Class
 
@@ -2287,16 +2295,16 @@ Namespace WorkDay
         Public Property Examination_Date As String
 
         <XmlElement(ElementName:="Certification_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Certification_Reference As Certification_Reference
+        Public Property Certification_Reference() As Certification_Reference()
 
         <XmlElement(ElementName:="Country_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Country_Reference As Country_Reference
+        Public Property Country_Reference() As Country_Reference()
 
         <XmlElement(ElementName:="Specialty_Achievement_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Specialty_Achievement_Data As Specialty_Achievement_Data
+        Public Property Specialty_Achievement_Data() As Specialty_Achievement_Data()
 
         <XmlElement(ElementName:="Worker_Document_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Worker_Document_Data As Worker_Document_Data
+        Public Property Worker_Document_Data() As Worker_Document_Data()
 
     End Class
 
@@ -2305,10 +2313,10 @@ Namespace WorkDay
     Public Class Certification
 
         <XmlElement(ElementName:="Certification_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Certification_Reference As Certification_Reference
+        Public Property Certification_Reference() As Certification_Reference()
 
         <XmlElement(ElementName:="Certification_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Certification_Data As Certification_Data
+        Public Property Certification_Data() As Certification_Data()
 
     End Class
 
@@ -2320,7 +2328,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2332,7 +2340,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2359,7 +2367,7 @@ Namespace WorkDay
         Public Property Training_Duration As String
 
         <XmlElement(ElementName:="Training_Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Training_Type_Reference As Training_Type_Reference
+        Public Property Training_Type_Reference() As Training_Type_Reference()
 
     End Class
 
@@ -2368,10 +2376,10 @@ Namespace WorkDay
     Public Class Training
 
         <XmlElement(ElementName:="Training_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Training_Reference As Training_Reference
+        Public Property Training_Reference() As Training_Reference()
 
         <XmlElement(ElementName:="Training_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Training_Data As Training_Data
+        Public Property Training_Data() As Training_Data()
 
     End Class
 
@@ -2383,7 +2391,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2395,7 +2403,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2407,7 +2415,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2440,10 +2448,10 @@ Namespace WorkDay
         Public Property URL As String
 
         <XmlElement(ElementName:="Award_and_Activity_Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Award_and_Activity_Type_Reference As Award_and_Activity_Type_Reference
+        Public Property Award_and_Activity_Type_Reference() As Award_and_Activity_Type_Reference()
 
         <XmlElement(ElementName:="Related_Position_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Related_Position_Reference As Related_Position_Reference
+        Public Property Related_Position_Reference() As Related_Position_Reference()
 
     End Class
 
@@ -2452,10 +2460,10 @@ Namespace WorkDay
     Public Class Award_and_Activity
 
         <XmlElement(ElementName:="Award_and_Activity_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Award_and_Activity_Reference As Award_and_Activity_Reference
+        Public Property Award_and_Activity_Reference() As Award_and_Activity_Reference()
 
         <XmlElement(ElementName:="Award_and_Activity_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Award_and_Activity_Data As Award_and_Activity_Data
+        Public Property Award_and_Activity_Data() As Award_and_Activity_Data()
 
     End Class
 
@@ -2467,7 +2475,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2479,7 +2487,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2491,7 +2499,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2503,7 +2511,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2512,19 +2520,19 @@ Namespace WorkDay
     Public Class Contact_Information_Data
 
         <XmlElement(ElementName:="Address_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Address_Data As Address_Data
+        Public Property Address_Data() As Address_Data()
 
         <XmlElement(ElementName:="Phone_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Phone_Data As Phone_Data
+        Public Property Phone_Data() As Phone_Data()
 
         <XmlElement(ElementName:="Email_Address_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Email_Address_Data As Email_Address_Data
+        Public Property Email_Address_Data() As Email_Address_Data()
 
         <XmlElement(ElementName:="Instant_Messenger_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Instant_Messenger_Data As Instant_Messenger_Data
+        Public Property Instant_Messenger_Data() As Instant_Messenger_Data()
 
         <XmlElement(ElementName:="Web_Address_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Web_Address_Data As Web_Address_Data
+        Public Property Web_Address_Data() As Web_Address_Data()
 
     End Class
 
@@ -2551,16 +2559,16 @@ Namespace WorkDay
         Public Property End_Date As String
 
         <XmlElement(ElementName:="Professional_Affiliation_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Professional_Affiliation_Reference As Professional_Affiliation_Reference
+        Public Property Professional_Affiliation_Reference() As Professional_Affiliation_Reference()
 
         <XmlElement(ElementName:="Professional_Affiliation_Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Professional_Affiliation_Type_Reference As Professional_Affiliation_Type_Reference
+        Public Property Professional_Affiliation_Type_Reference() As Professional_Affiliation_Type_Reference()
 
         <XmlElement(ElementName:="Professional_Affiliation_Relationship_Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Professional_Affiliation_Relationship_Type_Reference As Professional_Affiliation_Relationship_Type_Reference
+        Public Property Professional_Affiliation_Relationship_Type_Reference() As Professional_Affiliation_Relationship_Type_Reference()
 
         <XmlElement(ElementName:="Contact_Information_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Contact_Information_Data As Contact_Information_Data
+        Public Property Contact_Information_Data() As Contact_Information_Data()
 
     End Class
 
@@ -2569,10 +2577,10 @@ Namespace WorkDay
     Public Class Organization_Membership
 
         <XmlElement(ElementName:="Organization_Professional_Affiliation_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Organization_Professional_Affiliation_Reference As Organization_Professional_Affiliation_Reference
+        Public Property Organization_Professional_Affiliation_Reference() As Organization_Professional_Affiliation_Reference()
 
         <XmlElement(ElementName:="Organization_Professional_Affiliation_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Organization_Professional_Affiliation_Data As Organization_Professional_Affiliation_Data
+        Public Property Organization_Professional_Affiliation_Data() As Organization_Professional_Affiliation_Data()
 
     End Class
 
@@ -2584,7 +2592,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2596,7 +2604,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2608,7 +2616,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2620,7 +2628,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2632,7 +2640,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2644,7 +2652,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2662,7 +2670,7 @@ Namespace WorkDay
         Public Property File As String
 
         <XmlElement(ElementName:="Document_Category_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Document_Category_Reference As Document_Category_Reference
+        Public Property Document_Category_Reference() As Document_Category_Reference()
 
     End Class
 
@@ -2704,25 +2712,25 @@ Namespace WorkDay
         Public Property Last_Day_Attended As String
 
         <XmlElement(ElementName:="Country_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Country_Reference As Country_Reference
+        Public Property Country_Reference() As Country_Reference()
 
         <XmlElement(ElementName:="School_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property School_Reference As School_Reference
+        Public Property School_Reference() As School_Reference()
 
         <XmlElement(ElementName:="School_Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property School_Type_Reference As School_Type_Reference
+        Public Property School_Type_Reference() As School_Type_Reference()
 
         <XmlElement(ElementName:="Degree_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Degree_Reference As Degree_Reference
+        Public Property Degree_Reference() As Degree_Reference()
 
         <XmlElement(ElementName:="Degree_Completed_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Degree_Completed_Reference As Degree_Completed_Reference
+        Public Property Degree_Completed_Reference() As Degree_Completed_Reference()
 
         <XmlElement(ElementName:="Field_Of_Study_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Field_Of_Study_Reference As Field_Of_Study_Reference
+        Public Property Field_Of_Study_Reference() As Field_Of_Study_Reference()
 
         <XmlElement(ElementName:="Education_Attachment_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Education_Attachment_Data As Education_Attachment_Data
+        Public Property Education_Attachment_Data() As Education_Attachment_Data()
 
     End Class
 
@@ -2731,10 +2739,10 @@ Namespace WorkDay
     Public Class Education
 
         <XmlElement(ElementName:="Education_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Education_Reference As Education_Reference
+        Public Property Education_Reference() As Education_Reference()
 
         <XmlElement(ElementName:="Education_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Education_Data As Education_Data
+        Public Property Education_Data() As Education_Data()
 
     End Class
 
@@ -2746,7 +2754,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2758,7 +2766,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2773,10 +2781,10 @@ Namespace WorkDay
         Public Property Experience_Comment As String
 
         <XmlElement(ElementName:="Experience_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Experience_Reference As Experience_Reference
+        Public Property Experience_Reference() As Experience_Reference()
 
         <XmlElement(ElementName:="Experience_Rating_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Experience_Rating_Reference As Experience_Rating_Reference
+        Public Property Experience_Rating_Reference() As Experience_Rating_Reference()
 
     End Class
 
@@ -2788,7 +2796,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2800,7 +2808,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2812,7 +2820,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2821,10 +2829,10 @@ Namespace WorkDay
     Public Class Language_Ability_Data
 
         <XmlElement(ElementName:="Language_Proficiency_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Language_Proficiency_Reference As Language_Proficiency_Reference
+        Public Property Language_Proficiency_Reference() As Language_Proficiency_Reference()
 
         <XmlElement(ElementName:="Language_Ability_Type_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Language_Ability_Type_Reference As Language_Ability_Type_Reference
+        Public Property Language_Ability_Type_Reference() As Language_Ability_Type_Reference()
 
     End Class
 
@@ -2833,7 +2841,7 @@ Namespace WorkDay
     Public Class Language_Ability
 
         <XmlElement(ElementName:="Language_Ability_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Language_Ability_Data As Language_Ability_Data
+        Public Property Language_Ability_Data() As Language_Ability_Data()
 
     End Class
 
@@ -2845,7 +2853,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2866,13 +2874,13 @@ Namespace WorkDay
         Public Property Note As String
 
         <XmlElement(ElementName:="Language_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Language_Reference As Language_Reference
+        Public Property Language_Reference() As Language_Reference()
 
         <XmlElement(ElementName:="Language_Ability", Namespace:="urn:com.workday/bsvc")>
-        Public Property Language_Ability As Language_Ability
+        Public Property Language_Ability() As Language_Ability()
 
         <XmlElement(ElementName:="Assessed_by_Worker_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Assessed_by_Worker_Reference As Assessed_by_Worker_Reference
+        Public Property Assessed_by_Worker_Reference() As Assessed_by_Worker_Reference()
 
     End Class
 
@@ -2884,7 +2892,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2920,10 +2928,10 @@ Namespace WorkDay
     Public Class Internal_Project_Experience
 
         <XmlElement(ElementName:="Internal_Project_Experience_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Internal_Project_Experience_Reference As Internal_Project_Experience_Reference
+        Public Property Internal_Project_Experience_Reference() As Internal_Project_Experience_Reference()
 
         <XmlElement(ElementName:="Internal_Project_Experience_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Internal_Project_Experience_Data As Internal_Project_Experience_Data
+        Public Property Internal_Project_Experience_Data() As Internal_Project_Experience_Data()
 
     End Class
 
@@ -2932,34 +2940,34 @@ Namespace WorkDay
     Public Class Qualification_Data
 
         <XmlElement(ElementName:="External_Job_History", Namespace:="urn:com.workday/bsvc")>
-        Public Property External_Job_History As External_Job_History
+        Public Property External_Job_History() As External_Job_History()
 
         <XmlElement(ElementName:="Competency", Namespace:="urn:com.workday/bsvc")>
-        Public Property Competency As Competency
+        Public Property Competency() As Competency()
 
         <XmlElement(ElementName:="Certification", Namespace:="urn:com.workday/bsvc")>
-        Public Property Certification As Certification
+        Public Property Certification() As Certification()
 
         <XmlElement(ElementName:="Training", Namespace:="urn:com.workday/bsvc")>
-        Public Property Training As Training
+        Public Property Training() As Training()
 
         <XmlElement(ElementName:="Award_and_Activity", Namespace:="urn:com.workday/bsvc")>
-        Public Property Award_and_Activity As Award_and_Activity
+        Public Property Award_and_Activity() As Award_and_Activity()
 
         <XmlElement(ElementName:="Organization_Membership", Namespace:="urn:com.workday/bsvc")>
-        Public Property Organization_Membership As Organization_Membership
+        Public Property Organization_Membership() As Organization_Membership()
 
         <XmlElement(ElementName:="Education", Namespace:="urn:com.workday/bsvc")>
-        Public Property Education As Education
+        Public Property Education() As Education()
 
         <XmlElement(ElementName:="Work_Experience", Namespace:="urn:com.workday/bsvc")>
-        Public Property Work_Experience As Work_Experience
+        Public Property Work_Experience() As Work_Experience()
 
         <XmlElement(ElementName:="Language", Namespace:="urn:com.workday/bsvc")>
-        Public Property Language As Language
+        Public Property Language() As Language()
 
         <XmlElement(ElementName:="Internal_Project_Experience", Namespace:="urn:com.workday/bsvc")>
-        Public Property Internal_Project_Experience As Internal_Project_Experience
+        Public Property Internal_Project_Experience() As Internal_Project_Experience()
 
     End Class
 
@@ -2971,7 +2979,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2983,7 +2991,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -2995,7 +3003,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -3007,7 +3015,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -3019,7 +3027,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -3037,19 +3045,19 @@ Namespace WorkDay
         Public Property Eligible_for_Rehire_Comments As String
 
         <XmlElement(ElementName:="Eligible_For_Hire_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Eligible_For_Hire_Reference As Eligible_For_Hire_Reference
+        Public Property Eligible_For_Hire_Reference() As Eligible_For_Hire_Reference()
 
         <XmlElement(ElementName:="Applicant_Has_Marked_as_No_Show_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Applicant_Has_Marked_as_No_Show_Reference As Applicant_Has_Marked_as_No_Show_Reference
+        Public Property Applicant_Has_Marked_as_No_Show_Reference() As Applicant_Has_Marked_as_No_Show_Reference()
 
         <XmlElement(ElementName:="Applicant_Source_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Applicant_Source_Reference As Applicant_Source_Reference
+        Public Property Applicant_Source_Reference() As Applicant_Source_Reference()
 
         <XmlElement(ElementName:="Referred_by_Worker_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Referred_by_Worker_Reference As Referred_by_Worker_Reference
+        Public Property Referred_by_Worker_Reference() As Referred_by_Worker_Reference()
 
         <XmlElement(ElementName:="Positions_Considered_for_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Positions_Considered_for_Reference As Positions_Considered_for_Reference
+        Public Property Positions_Considered_for_Reference() As Positions_Considered_for_Reference()
 
     End Class
 
@@ -3061,7 +3069,7 @@ Namespace WorkDay
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -3088,10 +3096,10 @@ Namespace WorkDay
     Public Class _Resume
 
         <XmlElement(ElementName:="Resume_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Resume_Reference As Resume_Reference
+        Public Property Resume_Reference() As Resume_Reference()
 
         <XmlElement(ElementName:="Resume_Data_2", Namespace:="urn:com.workday/bsvc")>
-        Public Property Resume_Data_2 As Resume_Data_2
+        Public Property Resume_Data_2() As Resume_Data_2()
 
     End Class
 
@@ -3100,9 +3108,9 @@ Namespace WorkDay
     Public Class Resume_Data
 
         <XmlElement(ElementName:="Resume", Namespace:="urn:com.workday/bsvc")>
-        Public Property _Resume As _Resume
+        Public Property _Resume() As _Resume()
 
-End Class
+    End Class
 
 
     <XmlRoot(ElementName:="Background_Check_Data", Namespace:="urn:com.workday/bsvc")>
@@ -3115,7 +3123,7 @@ End Class
         Public Property Status_Comment As String
 
         <XmlElement(ElementName:="Status_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Status_Reference As Status_Reference
+        Public Property Status_Reference() As Status_Reference()
 
     End Class
 
@@ -3124,7 +3132,7 @@ End Class
     Public Class External_Integration_ID_Data
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -3136,7 +3144,7 @@ End Class
         Public Property Descriptor As String
 
         <XmlElement(ElementName:="ID", Namespace:="urn:com.workday/bsvc")>
-        Public Property ID As ID
+        Public Property ID() As ID()
 
     End Class
 
@@ -3148,7 +3156,7 @@ End Class
         Public Property Value As String
 
         <XmlElement(ElementName:="Field_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Field_Reference As Field_Reference
+        Public Property Field_Reference() As Field_Reference()
 
     End Class
 
@@ -3160,25 +3168,25 @@ End Class
         Public Property Applicant_ID As String
 
         <XmlElement(ElementName:="Personal_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Personal_Data As Personal_Data
+        Public Property Personal_Data() As Personal_Data()
 
         <XmlElement(ElementName:="Qualification_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Qualification_Data As Qualification_Data
+        Public Property Qualification_Data() As Qualification_Data()
 
         <XmlElement(ElementName:="Recruiting_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Recruiting_Data As Recruiting_Data
+        Public Property Recruiting_Data() As Recruiting_Data()
 
         <XmlElement(ElementName:="Resume_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Resume_Data As Resume_Data
+        Public Property Resume_Data() As Resume_Data()
 
         <XmlElement(ElementName:="Background_Check_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Background_Check_Data As Background_Check_Data
+        Public Property Background_Check_Data() As Background_Check_Data()
 
         <XmlElement(ElementName:="External_Integration_ID_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property External_Integration_ID_Data As External_Integration_ID_Data
+        Public Property External_Integration_ID_Data() As External_Integration_ID_Data()
 
         <XmlElement(ElementName:="Document_Field_Result_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Document_Field_Result_Data As Document_Field_Result_Data
+        Public Property Document_Field_Result_Data() As Document_Field_Result_Data()
 
     End Class
 
@@ -3187,10 +3195,10 @@ End Class
     Public Class Applicant
 
         <XmlElement(ElementName:="Applicant_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Applicant_Reference As Applicant_Reference
+        Public Property Applicant_Reference() As Applicant_Reference()
 
         <XmlElement(ElementName:="Applicant_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Applicant_Data As Applicant_Data
+        Public Property Applicant_Data() As Applicant_Data()
 
     End Class
 
@@ -3199,34 +3207,7 @@ End Class
     Public Class Response_Data
 
         <XmlElement(ElementName:="Applicant", Namespace:="urn:com.workday/bsvc")>
-        Public Property Applicant As Applicant
-
-    End Class
-
-
-    <XmlRoot(ElementName:="Get_Applicants_Response", Namespace:="urn:com.workday/bsvc")>
-    Public Class Get_Applicants_Response
-
-        <XmlAttribute(AttributeName:="version", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
-        Public Property version As String
-
-        <XmlElement(ElementName:="Request_References", Namespace:="urn:com.workday/bsvc")>
-        Public Property Request_References As Request_References
-
-        <XmlElement(ElementName:="Request_Criteria", Namespace:="urn:com.workday/bsvc")>
-        Public Property Request_Criteria As Request_Criteria
-
-        <XmlElement(ElementName:="Response_Filter", Namespace:="urn:com.workday/bsvc")>
-        Public Property Response_Filter As Response_Filter
-
-        <XmlElement(ElementName:="Response_Group", Namespace:="urn:com.workday/bsvc")>
-        Public Property Response_Group As Response_Group
-
-        <XmlElement(ElementName:="Response_Results", Namespace:="urn:com.workday/bsvc")>
-        Public Property Response_Results As Response_Results
-
-        <XmlElement(ElementName:="Response_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Response_Data As Response_Data
+        Public Property Applicant() As Applicant()
 
     End Class
 
@@ -3237,25 +3218,8 @@ End Class
         <XmlAttribute(AttributeName:="version", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
         Public Property version As String
 
-        <XmlElement(ElementName:="Request_References", Namespace:="urn:com.workday/bsvc")>
-        Public Property Request_References As Request_References
-
-        <XmlElement(ElementName:="Request_Criteria", Namespace:="urn:com.workday/bsvc")>
-        Public Property Request_Criteria As Request_Criteria
-
-        <XmlElement(ElementName:="Response_Filter", Namespace:="urn:com.workday/bsvc")>
-        Public Property Response_Filter As Response_Filter
-
-        <XmlElement(ElementName:="Response_Group", Namespace:="urn:com.workday/bsvc")>
-        Public Property Response_Group As Response_Group
-
-        <XmlElement(ElementName:="Response_Results", Namespace:="urn:com.workday/bsvc")>
-        Public Property Response_Results As Response_Results
-
-        <XmlElement(ElementName:="Response_Data", Namespace:="urn:com.workday/bsvc")>
-        Public Property Response_Data As Response_Data
-
     End Class
+
 
 
 End Namespace

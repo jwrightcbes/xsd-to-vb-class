@@ -69,12 +69,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ResultModelClasses\Recruiting.vb" />
     <Compile Include="ResultModelClasses\WorkdayApplicantTxnXml.vb.vb" />
     <Compile Include="ResultModelClasses\WorkdayApplicantXml.vb" />
     <Compile Include="XsdWorkingClasses.vb" />
-    <Compile Include="Xsd\Get_Applicants_Response.vb">
-      <DependentUpon>Get_Applicants_Response.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -102,15 +100,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Xsd\Get_Applicants_Response.xsc">
-      <DependentUpon>Get_Applicants_Response.xsd</DependentUpon>
-    </None>
-    <None Include="Xsd\Get_Applicants_Response.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Xsd\Get_Applicants_Response.xss">
-      <DependentUpon>Get_Applicants_Response.xsd</DependentUpon>
-    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -123,10 +112,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Xml\" />
+    <Folder Include="SerializedXml\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="SampleXml\mini.xml" />
+    <Content Include="SampleXml\Sample_Get_Applicants_Request.xml" />
+    <Content Include="SampleXml\Sample_Get_Applicants_Response.xml" />
     <Content Include="VbClassFileOutput\2022-06-13__01-16__vb-class.txt" />
     <Content Include="VbClassFileOutput\2022-06-13__04-47__vb-class.txt" />
     <Content Include="VbClassFileOutput\2022-06-14__05-37__vb-class.txt" />
@@ -136,6 +128,7 @@
     <Content Include="VbClassFileOutput\2022-06-14__06-22__vb-class.txt" />
     <Content Include="VbClassFileOutput\2022-06-14__06-27__vb-class.txt" />
     <Content Include="VbClassFileOutput\2022-06-14__06-36__vb-class.txt" />
+    <Content Include="Xsd\Get_Applicants_Response_Schema.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

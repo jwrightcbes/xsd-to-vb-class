@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="NewDataSet" targetNamespace="urn:com.workday/bsvc"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="NewDataSet" targetNamespace="urn:com.workday/bsvc" xmlns:mstns="urn:com.workday/bsvc" xmlns="urn:com.workday/bsvc" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:element name="Applicant_Reference" msdata:Prefix="bsvc">
     <xs:complexType>
       <xs:sequence>
@@ -237,12 +237,12 @@
           </xs:complexType>
         </xs:element>
       </xs:sequence>
-      <xs:attribute name="Formatted_Address" msdata:Prefix="bsvc" type="xs:string" />
       <xs:attribute name="Address_Format_Type" msdata:Prefix="bsvc" type="xs:string" />
       <xs:attribute name="Defaulted_Business_Site_Address" msdata:Prefix="bsvc" type="xs:string" />
       <xs:attribute name="Delete" msdata:Prefix="bsvc" type="xs:string" />
       <xs:attribute name="Do_Not_Replace_All" msdata:Prefix="bsvc" type="xs:string" />
       <xs:attribute name="Effective_Date" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="Formatted_Address" msdata:Prefix="bsvc" type="xs:string" />
     </xs:complexType>
   </xs:element>
   <xs:element name="Usage_Data" msdata:Prefix="bsvc">
@@ -311,14 +311,14 @@
         </xs:element>
       </xs:sequence>
       <xs:attribute name="Area_Code" msdata:Prefix="bsvc" type="xs:string" />
-      <xs:attribute name="Tenant_Formatted_Phone" msdata:Prefix="bsvc" type="xs:string" />
-      <xs:attribute name="International_Formatted_Phone" msdata:Prefix="bsvc" type="xs:string" />
-      <xs:attribute name="Phone_Number_Without_Area_Code" msdata:Prefix="bsvc" type="xs:string" />
-      <xs:attribute name="National_Formatted_Phone" msdata:Prefix="bsvc" type="xs:string" />
-      <xs:attribute name="E164_Formatted_Phone" msdata:Prefix="bsvc" type="xs:string" />
-      <xs:attribute name="Workday_Traditional_Formatted_Phone" msdata:Prefix="bsvc" type="xs:string" />
       <xs:attribute name="Delete" msdata:Prefix="bsvc" type="xs:string" />
       <xs:attribute name="Do_Not_Replace_All" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="E164_Formatted_Phone" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="International_Formatted_Phone" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="National_Formatted_Phone" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="Phone_Number_Without_Area_Code" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="Tenant_Formatted_Phone" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="Workday_Traditional_Formatted_Phone" msdata:Prefix="bsvc" type="xs:string" />
     </xs:complexType>
   </xs:element>
   <xs:element name="Email_Address_Data" msdata:Prefix="bsvc">
