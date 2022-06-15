@@ -1,0 +1,1696 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" targetNamespace="urn:com.workday/bsvc"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="Applicant_Reference" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ID" msdata:Prefix="bsvc" nillable="true">
+    <xs:complexType>
+      <xs:simpleContent msdata:Prefix="bsvc" msdata:ColumnName="ID_Text" msdata:Ordinal="1">
+        <xs:extension base="xs:string">
+          <xs:attribute name="type" msdata:Prefix="bsvc" type="xs:string" />
+          <xs:attribute name="parent_id" msdata:Prefix="bsvc" type="xs:string" />
+          <xs:attribute name="parent_type" msdata:Prefix="bsvc" type="xs:string" />
+          <xs:attribute name="System_ID" msdata:Prefix="bsvc" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Name_Detail_Data" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="First_Name" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+        <xs:element name="Middle_Name" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+        <xs:element name="Last_Name" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="3" />
+        <xs:element name="Secondary_Last_Name" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="4" />
+        <xs:element name="Tertiary_Last_Name" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="5" />
+        <xs:element name="Full_Name_for_Singapore_and_Malaysia" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="6" />
+        <xs:element ref="Country_Reference" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Prefix_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Title_Descriptor" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+              <xs:element name="Title_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Salutation_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Local_Name_Detail_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="First_Name" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+              <xs:element name="Middle_Name" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              <xs:element name="Last_Name" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              <xs:element name="Secondary_Last_Name" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="3" />
+              <xs:element name="First_Name_2" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="4" />
+              <xs:element name="Middle_Name_2" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="5" />
+              <xs:element name="Last_Name_2" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="6" />
+              <xs:element name="Secondary_Last_Name_2" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="7" />
+            </xs:sequence>
+            <xs:attribute name="Local_Name" msdata:Prefix="bsvc" type="xs:string" />
+            <xs:attribute name="Local_Script" msdata:Prefix="bsvc" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Suffix_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Social_Suffix_Descriptor" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+              <xs:element name="Social_Suffix_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Academic_Suffix_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Hereditary_Suffix_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Honorary_Suffix_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Professional_Suffix_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Religious_Suffix_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Royal_Suffix_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Formatted_Name" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="Reporting_Name" msdata:Prefix="bsvc" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Country_Reference" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Status_Reference" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ID_Type_Reference" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Verified_By_Reference" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Country_Region_Reference" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Address_Data" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Last_Modified" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+        <xs:element name="Municipality" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+        <xs:element name="Country_Region_Descriptor" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="3" />
+        <xs:element name="Postal_Code" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="4" />
+        <xs:element name="Number_of_Days" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="5" />
+        <xs:element name="Municipality_Local" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="6" />
+        <xs:element name="Address_ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="7" />
+        <xs:element ref="Country_Reference" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Address_Line_Data" msdata:Prefix="bsvc" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:Prefix="bsvc" msdata:ColumnName="Address_Line_Data_Text" msdata:Ordinal="2">
+              <xs:extension base="xs:string">
+                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                <xs:attribute name="Type" msdata:Prefix="bsvc" type="xs:string" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Country_City_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Submunicipality_Data" msdata:Prefix="bsvc" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:Prefix="bsvc" msdata:ColumnName="Submunicipality_Data_Text" msdata:Ordinal="2">
+              <xs:extension base="xs:string">
+                <xs:attribute name="Address_Component_Name" msdata:Prefix="bsvc" type="xs:string" />
+                <xs:attribute name="Type" msdata:Prefix="bsvc" type="xs:string" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="Country_Region_Reference" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Subregion_Data" msdata:Prefix="bsvc" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:Prefix="bsvc" msdata:ColumnName="Subregion_Data_Text" msdata:Ordinal="2">
+              <xs:extension base="xs:string">
+                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                <xs:attribute name="Type" msdata:Prefix="bsvc" type="xs:string" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="Usage_Data" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Address_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Formatted_Address" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="Address_Format_Type" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="Defaulted_Business_Site_Address" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="Delete" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="Do_Not_Replace_All" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="Effective_Date" msdata:Prefix="bsvc" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usage_Data" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Comments" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+        <xs:element name="Type_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Type_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Primary" msdata:Prefix="bsvc" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Use_For_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Use_For_Tenanted_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Public" msdata:Prefix="bsvc" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Phone_Data" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Country_ISO_Code" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+        <xs:element name="International_Phone_Code" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+        <xs:element name="Phone_Number" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+        <xs:element name="Phone_Extension" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="3" />
+        <xs:element name="ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="5" />
+        <xs:element name="Phone_Device_Type_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="Usage_Data" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Phone_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Area_Code" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="Tenant_Formatted_Phone" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="International_Formatted_Phone" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="Phone_Number_Without_Area_Code" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="National_Formatted_Phone" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="E164_Formatted_Phone" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="Workday_Traditional_Formatted_Phone" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="Delete" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="Do_Not_Replace_All" msdata:Prefix="bsvc" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Email_Address_Data" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Email_Address" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+        <xs:element name="Email_Comment" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+        <xs:element name="ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="3" />
+        <xs:element ref="Usage_Data" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Email_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Delete" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="Do_Not_Replace_All" msdata:Prefix="bsvc" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Instant_Messenger_Data" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Instant_Messenger_Address" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+        <xs:element name="Instant_Messenger_Comment" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+        <xs:element name="ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="3" />
+        <xs:element name="Instant_Messenger_Type_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="Usage_Data" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Instant_Messenger_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Delete" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="Do_Not_Replace_All" msdata:Prefix="bsvc" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Web_Address_Data" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Web_Address" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+        <xs:element name="Web_Address_Comment" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+        <xs:element name="ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="3" />
+        <xs:element ref="Usage_Data" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Web_Address_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Delete" msdata:Prefix="bsvc" type="xs:string" />
+      <xs:attribute name="Do_Not_Replace_All" msdata:Prefix="bsvc" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Certification_Reference" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Document_Category_Reference" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Get_Applicants_Response" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Request_References" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="Applicant_Reference" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Request_Criteria" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Email_Address" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+              <xs:element name="Worker_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Former_Worker_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Field_And_Parameter_Criteria_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Provider_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                        </xs:sequence>
+                        <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Response_Filter" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="As_Of_Effective_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+              <xs:element name="As_Of_Entry_DateTime" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+              <xs:element name="Page" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+              <xs:element name="Count" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Response_Group" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Include_Reference" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+              <xs:element name="Include_Personal_Information" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+              <xs:element name="Include_Recruiting_Information" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+              <xs:element name="Include_Qualification_Profile" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+              <xs:element name="Include_Resume" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+              <xs:element name="Include_Background_Check" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+              <xs:element name="Include_External_Integration_ID_Data" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Response_Results" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Total_Results" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+              <xs:element name="Total_Pages" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+              <xs:element name="Page_Results" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+              <xs:element name="Page" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Response_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Applicant" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="Applicant_Reference" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element name="Applicant_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Applicant_ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                          <xs:element name="Personal_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Universal_ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Birth_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Date_of_Death" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Region_of_Birth_Descriptor" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="City_of_Birth" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Marital_Status_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Hispanic_or_Latino" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Hukou_Locality" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Hukou_Postal_Code" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Local_Hukou" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Native_Region_Descriptor" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Personnel_File_Agency_for_Person" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Last_Medical_Exam_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Last_Medical_Exam_Valid_To" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Medical_Exam_Notes" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Tobacco_Use" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Name_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Legal_Name_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="Name_Detail_Data" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Preferred_Name_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="Name_Detail_Data" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Additional_Name_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="Name_Detail_Data" minOccurs="0" maxOccurs="unbounded" />
+                                            <xs:element name="Name_Type_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Gender_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Country_of_Birth_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Region_of_Birth_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="City_of_Birth_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Marital_Status_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Religion_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Disability_Status_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Disability_Status_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Disability_Date_Known" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Disability_End_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Disability_Degree" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Disability_Remaining_Capacity" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Disability_Certification_Authority" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Disability_Certified_At" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Disability_Certification_ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Disability_Severity_Recognition_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Disability_FTE_Toward_Quota" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Disability_Work_Restrictions" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Disability_Accommodations_Requested" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Disability_Accommodations_Provided" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Disability_Rehabilitation_Requested" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Disability_Rehabilitation_Provided" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Note" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Disability_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Disability_Grade_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Disability_Certification_Authority_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Disability_Certification_Basis_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Worker_Document_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Disability_Status_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Ethnicity_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Citizenship_Status_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Primary_Nationality_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Additional_Nationality_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Hukou_Region_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Hukou_Subregion_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Hukou_Type_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Native_Region_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Blood_Type_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Military_Service_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Discharge_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Status_Begin_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Notes" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element ref="Status_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                      <xs:element name="Military_Service_Type_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Military_Rank_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Military_Service_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Identification_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="National_ID" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="National_ID_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="National_ID_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Issued_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Expiration_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Verification_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Series" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Issuing_Agency" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element ref="ID_Type_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                                  <xs:element ref="Country_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                                  <xs:element ref="Verified_By_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="National_ID_Shared_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute name="Delete" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Government_ID" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Government_ID_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Government_ID_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Issued_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Expiration_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Verification_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element ref="ID_Type_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                                  <xs:element ref="Country_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                                  <xs:element name="Verified_by_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                      </xs:sequence>
+                                                      <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Government_ID_Shared_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute name="Delete" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Visa_ID" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Visa_ID_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Visa_ID_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Issued_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Expiration_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Verification_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element ref="ID_Type_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                                  <xs:element ref="Country_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                                  <xs:element ref="Verified_By_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Visa_ID_Shared_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute name="Delete" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Passport_ID" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Passport_ID_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Passport_ID_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Issued_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Expiration_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Verification_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element ref="ID_Type_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                                  <xs:element ref="Country_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                                  <xs:element ref="Verified_By_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Passport_ID_Shared_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute name="Delete" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="License_ID" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="License_ID_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="License_ID_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Country_Region_Descriptor" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="License_Class" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Issued_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Expiration_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Verification_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element ref="ID_Type_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                                  <xs:element ref="Country_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                                  <xs:element ref="Country_Region_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                                  <xs:element name="Authority_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                      </xs:sequence>
+                                                      <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element ref="Verified_By_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="License_ID_Shared_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute name="Delete" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Custom_ID" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Custom_ID_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Custom_ID_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Issued_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Expiration_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Custom_Description" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element ref="ID_Type_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                                  <xs:element name="Organization_ID_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                      </xs:sequence>
+                                                      <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Custom_ID_Shared_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute name="Delete" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Contact_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="Address_Data" minOccurs="0" maxOccurs="unbounded" />
+                                      <xs:element ref="Phone_Data" minOccurs="0" maxOccurs="unbounded" />
+                                      <xs:element ref="Email_Address_Data" minOccurs="0" maxOccurs="unbounded" />
+                                      <xs:element ref="Instant_Messenger_Data" minOccurs="0" maxOccurs="unbounded" />
+                                      <xs:element ref="Web_Address_Data" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Political_Affiliation_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Social_Benefits_Locality_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Relative_Name_Information_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Relative_Name_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Relative_Name_Reference_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Relative_Type_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element ref="Name_Detail_Data" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Delete" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="Replace_All" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Qualification_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="External_Job_History" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Job_History_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Job_History_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Job_History_ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Remove_Job_History" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Job_Title" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Company" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Start_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="End_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Responsibilities_and_Achievements" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Location" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Job_Reference" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Contact" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Job_History_Company_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Competency" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Competency_Level_Behavior_Descriptor" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Assessment_Comment" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Assessed_On" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Assessed_By_Worker_Descriptor" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Competency_Descriptor" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Competency_Level_Behavior_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Assessed_By_Person_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Competency_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Certification" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="Certification_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                      <xs:element name="Certification_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Certification_ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Remove_Certification" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Certification_Name" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Issuer" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Certification_Number" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Issued_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Expiration_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Examination_Score" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Examination_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element ref="Certification_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                            <xs:element ref="Country_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                            <xs:element name="Specialty_Achievement_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="Start_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="End_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Specialty_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                      </xs:sequence>
+                                                      <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element name="Subspecialty_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                      </xs:sequence>
+                                                      <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Worker_Document_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="File_Name" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Comment" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="File" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Content_Type" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element ref="Document_Category_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Training" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Training_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Training_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Training_ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Remove_Training" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Training" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Description" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Completion_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Training_Duration" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Training_Type_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Award_and_Activity" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Award_and_Activity_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Award_and_Activity_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Award_and_Activity_ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Remove_Award_and_Activity" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Title" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Sponsor_Issuer" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Start_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="End_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Description" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="URL" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Award_and_Activity_Type_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Related_Position_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Organization_Membership" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Organization_Professional_Affiliation_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Organization_Professional_Affiliation_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Professional_Affiliation_ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Remove_Professional_Affiliation" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Professional_Affiliation" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Affiliation" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Begin_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="End_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Professional_Affiliation_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Professional_Affiliation_Type_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Professional_Affiliation_Relationship_Type_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Contact_Information_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="Address_Data" minOccurs="0" maxOccurs="unbounded" />
+                                                  <xs:element ref="Phone_Data" minOccurs="0" maxOccurs="unbounded" />
+                                                  <xs:element ref="Email_Address_Data" minOccurs="0" maxOccurs="unbounded" />
+                                                  <xs:element ref="Instant_Messenger_Data" minOccurs="0" maxOccurs="unbounded" />
+                                                  <xs:element ref="Web_Address_Data" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Education" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Education_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Education_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Education_ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Remove_Education" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="School_Name" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Location" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Date_Degree_Received" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Grade_Average" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="First_Year_Attended" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Last_Year_Attended" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Is_Highest_Level_of_Education" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="First_Day_Attended" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Last_Day_Attended" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element ref="Country_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                            <xs:element name="School_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="School_Type_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Degree_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Degree_Completed_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Field_Of_Study_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                                <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Education_Attachment_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="File_Name" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Comment" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="File" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                                  <xs:element ref="Document_Category_Reference" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Work_Experience" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Remove_Experience" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Experience_Comment" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Experience_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Experience_Rating_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Language" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Remove_Language" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Native_Language" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Assessed_On" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Note" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Language_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Language_Ability" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Language_Ability_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="Language_Proficiency_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                      </xs:sequence>
+                                                      <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element name="Language_Ability_Type_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                                      </xs:sequence>
+                                                      <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Assessed_by_Worker_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Internal_Project_Experience" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Internal_Project_Experience_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Internal_Project_Experience_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Internal_Project_Experience_ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Remove_Internal_Project_Experience" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Internal_Project" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Description" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Start_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="End_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Project_Leader" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Recruiting_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Applicant_Entered_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Applicant_Comments" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Eligible_for_Rehire_Comments" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Eligible_For_Hire_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Applicant_Has_Marked_as_No_Show_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Applicant_Source_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Referred_by_Worker_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Positions_Considered_for_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Resume_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Resume" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Resume_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                          <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Resume_Data_2" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="File_ID" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="File" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="FileName" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                            <xs:element name="Comments" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Background_Check_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Status_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Status_Comment" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element ref="Status_Reference" minOccurs="0" maxOccurs="unbounded" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="External_Integration_ID_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Document_Field_Result_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Value" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                                <xs:element name="Field_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" msdata:Prefix="bsvc" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Applicant_Reference" />
+        <xs:element ref="ID" />
+        <xs:element ref="Name_Detail_Data" />
+        <xs:element ref="Country_Reference" />
+        <xs:element ref="Status_Reference" />
+        <xs:element ref="ID_Type_Reference" />
+        <xs:element ref="Verified_By_Reference" />
+        <xs:element ref="Country_Region_Reference" />
+        <xs:element ref="Address_Data" />
+        <xs:element ref="Usage_Data" />
+        <xs:element ref="Phone_Data" />
+        <xs:element ref="Email_Address_Data" />
+        <xs:element ref="Instant_Messenger_Data" />
+        <xs:element ref="Web_Address_Data" />
+        <xs:element ref="Certification_Reference" />
+        <xs:element ref="Document_Category_Reference" />
+        <xs:element ref="Get_Applicants_Response" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
