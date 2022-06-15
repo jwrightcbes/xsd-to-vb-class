@@ -69,7 +69,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ResultModelClasses\Recruiting.vb" />
     <Compile Include="ResultModelClasses\WorkdayApplicantTxnXml.vb.vb" />
     <Compile Include="ResultModelClasses\WorkdayApplicantXml.vb" />
     <Compile Include="XsdWorkingClasses.vb" />
