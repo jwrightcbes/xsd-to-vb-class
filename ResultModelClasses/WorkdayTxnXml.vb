@@ -4,8 +4,8 @@ Imports System.Xml
 Imports System.Xml.Schema
 Imports System.Xml.Serialization
 
-' This file covers Workday XML elements that are specific to the different transactions 
-' that deal with the Applicant object.
+' This file covers Workday XML elements that are specific to different transactions 
+' with Workday.
 
 Namespace WorkDay
 
@@ -91,6 +91,35 @@ Namespace WorkDay
         End Sub
 
     End Class
+
+    <XmlRoot(ElementName:="Put_Background_Check_Request", Namespace:="urn:com.workday/bsvc")>
+	Public Class Put_Background_Check_Request
+
+        <XmlNamespaceDeclarations>
+        Public Property xmlns As XmlSerializerNamespaces
+
+		<XmlAttribute(AttributeName:="version", Namespace:="urn:com.workday/bsvc", Form:=XmlSchemaForm.Qualified)>
+		Public Property version As string
+
+		<XmlElement(ElementName:="Business_Process_Parameters", Namespace:="urn:com.workday/bsvc")>
+		Public Property Business_Process_Parameters() As Business_Process_Parameters()
+
+		<XmlElement(ElementName:="Dynamic_Business_Process_Parameters", Namespace:="urn:com.workday/bsvc")>
+		Public Property Dynamic_Business_Process_Parameters() As Dynamic_Business_Process_Parameters()
+
+		<XmlElement(ElementName:="Background_Check_Data", Namespace:="urn:com.workday/bsvc")>
+		Public Property Background_Check_Data() As Background_Check_Data()
+
+        Sub New()
+            xmlns = New XmlSerializerNamespaces({
+                New XmlQualifiedName("wd", "urn:com.workday/bsvc")
+                })
+            version = String.Empty
+
+        End Sub
+
+
+	End Class
 
 
 End Namespace

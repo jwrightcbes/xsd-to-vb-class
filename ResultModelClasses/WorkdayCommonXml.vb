@@ -13,6 +13,7 @@ Namespace WorkDay
     PutBackground = 2
     GetApplicantsRequest = 3
     GetApplicantsResponse = 4
+    PutBackgroundCheckRequest = 5
 End Enum
 Public Class WorkdayXmlConstants
     Public Shared ReadOnly WorkdayXmlNamespaces As New XmlSerializerNamespaces({
@@ -150,6 +151,9 @@ End Class
         <XmlElement(ElementName:="Get_Applicants_Response", Namespace:="urn:com.workday/bsvc")>
         Public Property Get_Applicants_Response As Get_Applicants_Response
 
+        <XmlElement(ElementName:="Put_Background_Check_Request", Namespace:="urn:com.workday/bsvc")>
+        Public Property Put_Background_Check_Request As Put_Background_Check_Request
+
         Sub New()
         End Sub
 
@@ -162,6 +166,8 @@ End Class
                     Put_Applicant_Request = New Put_Applicant_Request()
                 Case WorkdayRequestType.GetApplicantsResponse
                     Get_Applicants_Response = New Get_Applicants_Response()
+                Case WorkdayRequestType.PutBackgroundCheckRequest
+                    Put_Background_Check_Request = New Put_Background_Check_Request()
             End Select
 
         End Sub

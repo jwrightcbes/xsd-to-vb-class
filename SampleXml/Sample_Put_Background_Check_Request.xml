@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<env:Header>
+		<wd:Workday_Common_Header xmlns:wd="urn:com.workday/bsvc">
+			<wd:Include_Reference_Descriptors_In_Response>true</wd:Include_Reference_Descriptors_In_Response>
+		</wd:Workday_Common_Header>
+		<wsse:Security env:mustUnderstand="1">
+			<wsse:UsernameToken>
+				<wsse:Username>usernamec</wsse:Username>
+				<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">password</wsse:Password>
+			</wsse:UsernameToken>
+		</wsse:Security>
+	</env:Header>
+	<env:Body>
+		<wd:Put_Background_Check_Request wd:version="v26.1" xmlns:wd="urn:com.workday/bsvc">
+			<wd:Business_Process_Parameters>
+				<wd:Auto_Complete>false</wd:Auto_Complete>
+				<wd:Run_Now>true</wd:Run_Now>
+			</wd:Business_Process_Parameters>
+			<wd:Background_Check_Data>
+				<wd:Event_Reference>
+					<wd:ID wd:type="Background_Check_ID">BACKGROUND_CHECK_EVENT-1-11111</wd:ID>
+				</wd:Event_Reference>
+				<wd:Background_Check_Status_Data>
+					<wd:Status_Date>2022-09-07</wd:Status_Date>
+					<wd:Status_Reference>
+						<wd:ID wd:type="Background_Check_Status_ID">Background Check In Progress</wd:ID>
+					</wd:Status_Reference>
+				</wd:Background_Check_Status_Data>
+				<wd:Package_Reference_Data>
+					<wd:Status_Reference>
+						<wd:ID wd:type="Background_Check_Status_ID">Background Check In Progress</wd:ID>
+					</wd:Status_Reference>
+					<wd:Results_URL>https://screen.accurate.com/auriconet/login.aspx</wd:Results_URL>
+				</wd:Package_Reference_Data>
+			</wd:Background_Check_Data>
+		</wd:Put_Background_Check_Request>
+	</env:Body>
+</env:Envelope>

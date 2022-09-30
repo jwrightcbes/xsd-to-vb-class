@@ -3113,19 +3113,19 @@ Namespace WorkDay
     End Class
 
 
-    <XmlRoot(ElementName:="Background_Check_Data", Namespace:="urn:com.workday/bsvc")>
-    Public Class Background_Check_Data
+    '<XmlRoot(ElementName:="Background_Check_Data", Namespace:="urn:com.workday/bsvc")>
+    'Public Class Background_Check_Data
 
-        <XmlElement(ElementName:="Status_Date", Namespace:="urn:com.workday/bsvc")>
-        Public Property Status_Date As String
+    '    <XmlElement(ElementName:="Status_Date", Namespace:="urn:com.workday/bsvc")>
+    '    Public Property Status_Date As String
 
-        <XmlElement(ElementName:="Status_Comment", Namespace:="urn:com.workday/bsvc")>
-        Public Property Status_Comment As String
+    '    <XmlElement(ElementName:="Status_Comment", Namespace:="urn:com.workday/bsvc")>
+    '    Public Property Status_Comment As String
 
-        <XmlElement(ElementName:="Status_Reference", Namespace:="urn:com.workday/bsvc")>
-        Public Property Status_Reference() As Status_Reference()
+    '    <XmlElement(ElementName:="Status_Reference", Namespace:="urn:com.workday/bsvc")>
+    '    Public Property Status_Reference() As Status_Reference()
 
-    End Class
+    'End Class
 
 
     <XmlRoot(ElementName:="External_Integration_ID_Data", Namespace:="urn:com.workday/bsvc")>

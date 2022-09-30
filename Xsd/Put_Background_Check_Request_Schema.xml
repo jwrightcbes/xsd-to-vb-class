@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" targetNamespace="urn:com.workday/bsvc" xmlns:mstns="urn:com.workday/bsvc" xmlns="urn:com.workday/bsvc" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="Comment_Data" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Comment" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+        <xs:element name="Worker_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ID" msdata:Prefix="bsvc" nillable="true">
+    <xs:complexType>
+      <xs:simpleContent msdata:Prefix="bsvc" msdata:ColumnName="ID_Text" msdata:Ordinal="1">
+        <xs:extension base="xs:string">
+          <xs:attribute name="type" msdata:Prefix="bsvc" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Status_Reference" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Put_Background_Check_Request" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Business_Process_Parameters" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Auto_Complete" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+              <xs:element name="Run_Now" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+              <xs:element ref="Comment_Data" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element name="Business_Process_Attachment_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="File_Name" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                    <xs:element name="Event_Attachment_Description" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                    <xs:element name="File" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                    <xs:element name="Content_Type" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                    <xs:element name="Event_Attachment_Category_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                        </xs:sequence>
+                        <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dynamic_Business_Process_Parameters" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Next_Step_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Disposition_Step_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Start_Parallel_Stage_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element ref="Comment_Data" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Background_Check_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Recipient_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Event_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Background_Check_Status_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Status_Date" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                    <xs:element name="Status_Comment" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" />
+                    <xs:element ref="Status_Reference" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Package_Reference_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Results_URL" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                    <xs:element name="Package_Comment" msdata:Prefix="bsvc" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+                    <xs:element name="Package_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                        </xs:sequence>
+                        <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element ref="Status_Reference" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="Package_Name" msdata:Prefix="bsvc" type="xs:string" />
+                  <xs:attribute name="Package_Description" msdata:Prefix="bsvc" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Test_Reference_Data" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Background_Check_Package_Test_Reference" msdata:Prefix="bsvc" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element ref="ID" minOccurs="0" maxOccurs="unbounded" />
+                        </xs:sequence>
+                        <xs:attribute name="Descriptor" msdata:Prefix="bsvc" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element ref="Status_Reference" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="Test_Name" msdata:Prefix="bsvc" type="xs:string" />
+                  <xs:attribute name="Test_Description" msdata:Prefix="bsvc" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" msdata:Prefix="bsvc" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:Prefix="bsvc">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Comment_Data" />
+        <xs:element ref="ID" />
+        <xs:element ref="Status_Reference" />
+        <xs:element ref="Put_Background_Check_Request" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

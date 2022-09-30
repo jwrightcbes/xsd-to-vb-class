@@ -69,8 +69,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ResultModelClasses\WorkdayApplicantTxnXml.vb.vb" />
+    <Compile Include="ResultModelClasses\WorkdayTxnXml.vb" />
     <Compile Include="ResultModelClasses\WorkdayApplicantXml.vb" />
+    <Compile Include="ResultModelClasses\WorkdayBackgroundCheckXml.vb" />
     <Compile Include="XsdWorkingClasses.vb" />
     <Compile Include="Program.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -118,16 +119,10 @@
     <Content Include="SampleXml\mini.xml" />
     <Content Include="SampleXml\Sample_Get_Applicants_Request.xml" />
     <Content Include="SampleXml\Sample_Get_Applicants_Response.xml" />
-    <Content Include="VbClassFileOutput\2022-06-13__01-16__vb-class.txt" />
-    <Content Include="VbClassFileOutput\2022-06-13__04-47__vb-class.txt" />
-    <Content Include="VbClassFileOutput\2022-06-14__05-37__vb-class.txt" />
-    <Content Include="VbClassFileOutput\2022-06-14__06-11__vb-class.txt" />
-    <Content Include="VbClassFileOutput\2022-06-14__06-16__vb-class.txt" />
-    <Content Include="VbClassFileOutput\2022-06-14__06-19__vb-class.txt" />
-    <Content Include="VbClassFileOutput\2022-06-14__06-22__vb-class.txt" />
-    <Content Include="VbClassFileOutput\2022-06-14__06-27__vb-class.txt" />
+    <Content Include="SampleXml\Sample_Put_Background_Check_Request.xml" />
     <Content Include="VbClassFileOutput\2022-06-14__06-36__vb-class.txt" />
     <Content Include="Xsd\Get_Applicants_Response_Schema.xml" />
+    <Content Include="Xsd\Put_Background_Check_Request_Schema.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

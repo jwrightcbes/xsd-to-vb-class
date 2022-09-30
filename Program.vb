@@ -13,14 +13,16 @@ Module Module1
     ''' </summary>
     Sub Main()
         ' Generate the file of vb classes
-        Dim xsdFilePath As String = "C:\Users\jwright\Documents\MyGithub\xsd-to-vb-class\xsd-to-vb-class\Xsd\Get_Applicants_Response_Schema.xml"
+        Dim xsdFilePath As String = "C:\Users\jwright\Documents\MyGithub\xsd-to-vb-class\xsd-to-vb-class\Xsd\Put_Background_Check_Request_Schema.xml"
         Dim vbClassFileDirectory As String = "C:\Users\jwright\Documents\MyGithub\xsd-to-vb-class\xsd-to-vb-class\VbClassFileOutput\"
+        ' comment/uncomment the below line when you are generating vb classes vs testing them
         'GenerateVbClasses(xsdFilePath, vbClassFileDirectory)
 
 
         ' Test the deserialization of sample XML based on those classes
-        Dim xmlFilePath As String = "C:\Users\jwright\Documents\MyGithub\xsd-to-vb-class\xsd-to-vb-class\SampleXml\Sample_Get_Applicants_Response.xml"
+        Dim xmlFilePath As String = "C:\Users\jwright\Documents\MyGithub\xsd-to-vb-class\xsd-to-vb-class\SampleXml\Sample_Put_Background_Check_Request.xml"
         Dim deserialized As WorkdayXmlEnvelope
+        ' comment/uncomment the below line when you are generating vb classes vs testing them
        deserialized = Deserialize(xmlFilePath)
 
         ' Test the serialization by serializing back to a string, slammed in a file in 
@@ -28,6 +30,7 @@ Module Module1
         ' Then you can compare the XML in to the XML out.
         Dim serialized As String = String.Empty
         Dim serializedFileDir As String = "C:\Users\jwright\Documents\MyGithub\xsd-to-vb-class\xsd-to-vb-class\SerializedXml\"
+        ' comment/uncomment the below line when you are generating vb classes vs testing them
         serialized = serialized = Serialize(deserialized, serializedFileDir)
 
     End Sub
